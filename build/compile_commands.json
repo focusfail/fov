@@ -1,0 +1,470 @@
+[
+{
+  "directory": "C:/code/fmv/build",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -IC:/code/fmv/third_party/glad/include -g -std=gnu11 -o CMakeFiles\\glad.dir\\third_party\\glad\\src\\glad.c.obj -c C:\\code\\fmv\\third_party\\glad\\src\\glad.c",
+  "file": "C:\\code\\fmv\\third_party\\glad\\src\\glad.c",
+  "output": "CMakeFiles\\glad.dir\\third_party\\glad\\src\\glad.c.obj"
+},
+{
+  "directory": "C:/code/fmv/build",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DLOG_USE_COLOR -IC:/code/fmv/third_party/log.c/src -g -std=gnu11 -o CMakeFiles\\logc.dir\\third_party\\log.c\\src\\log.c.obj -c C:\\code\\fmv\\third_party\\log.c\\src\\log.c",
+  "file": "C:\\code\\fmv\\third_party\\log.c\\src\\log.c",
+  "output": "CMakeFiles\\logc.dir\\third_party\\log.c\\src\\log.c.obj"
+},
+{
+  "directory": "C:/code/fmv/build",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DLOG_USE_COLOR -IC:/code/fmv/app/include -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/stb -IC:/code/fmv/third_party/glad/include -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/log.c/src -g -std=gnu11 -o CMakeFiles\\fmv.dir\\app\\source\\core\\model.c.obj -c C:\\code\\fmv\\app\\source\\core\\model.c",
+  "file": "C:\\code\\fmv\\app\\source\\core\\model.c",
+  "output": "CMakeFiles\\fmv.dir\\app\\source\\core\\model.c.obj"
+},
+{
+  "directory": "C:/code/fmv/build",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DLOG_USE_COLOR -IC:/code/fmv/app/include -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/stb -IC:/code/fmv/third_party/glad/include -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/log.c/src -g -std=gnu11 -o CMakeFiles\\fmv.dir\\app\\source\\engine\\arcball.c.obj -c C:\\code\\fmv\\app\\source\\engine\\arcball.c",
+  "file": "C:\\code\\fmv\\app\\source\\engine\\arcball.c",
+  "output": "CMakeFiles\\fmv.dir\\app\\source\\engine\\arcball.c.obj"
+},
+{
+  "directory": "C:/code/fmv/build",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DLOG_USE_COLOR -IC:/code/fmv/app/include -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/stb -IC:/code/fmv/third_party/glad/include -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/log.c/src -g -std=gnu11 -o CMakeFiles\\fmv.dir\\app\\source\\engine\\draw.c.obj -c C:\\code\\fmv\\app\\source\\engine\\draw.c",
+  "file": "C:\\code\\fmv\\app\\source\\engine\\draw.c",
+  "output": "CMakeFiles\\fmv.dir\\app\\source\\engine\\draw.c.obj"
+},
+{
+  "directory": "C:/code/fmv/build",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DLOG_USE_COLOR -IC:/code/fmv/app/include -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/stb -IC:/code/fmv/third_party/glad/include -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/log.c/src -g -std=gnu11 -o CMakeFiles\\fmv.dir\\app\\source\\engine\\file.c.obj -c C:\\code\\fmv\\app\\source\\engine\\file.c",
+  "file": "C:\\code\\fmv\\app\\source\\engine\\file.c",
+  "output": "CMakeFiles\\fmv.dir\\app\\source\\engine\\file.c.obj"
+},
+{
+  "directory": "C:/code/fmv/build",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DLOG_USE_COLOR -IC:/code/fmv/app/include -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/stb -IC:/code/fmv/third_party/glad/include -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/log.c/src -g -std=gnu11 -o CMakeFiles\\fmv.dir\\app\\source\\engine\\input.c.obj -c C:\\code\\fmv\\app\\source\\engine\\input.c",
+  "file": "C:\\code\\fmv\\app\\source\\engine\\input.c",
+  "output": "CMakeFiles\\fmv.dir\\app\\source\\engine\\input.c.obj"
+},
+{
+  "directory": "C:/code/fmv/build",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DLOG_USE_COLOR -IC:/code/fmv/app/include -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/stb -IC:/code/fmv/third_party/glad/include -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/log.c/src -g -std=gnu11 -o CMakeFiles\\fmv.dir\\app\\source\\engine\\shader.c.obj -c C:\\code\\fmv\\app\\source\\engine\\shader.c",
+  "file": "C:\\code\\fmv\\app\\source\\engine\\shader.c",
+  "output": "CMakeFiles\\fmv.dir\\app\\source\\engine\\shader.c.obj"
+},
+{
+  "directory": "C:/code/fmv/build",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DLOG_USE_COLOR -IC:/code/fmv/app/include -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/stb -IC:/code/fmv/third_party/glad/include -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/log.c/src -g -std=gnu11 -o CMakeFiles\\fmv.dir\\app\\source\\engine\\text.c.obj -c C:\\code\\fmv\\app\\source\\engine\\text.c",
+  "file": "C:\\code\\fmv\\app\\source\\engine\\text.c",
+  "output": "CMakeFiles\\fmv.dir\\app\\source\\engine\\text.c.obj"
+},
+{
+  "directory": "C:/code/fmv/build",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DLOG_USE_COLOR -IC:/code/fmv/app/include -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/stb -IC:/code/fmv/third_party/glad/include -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/log.c/src -g -std=gnu11 -o CMakeFiles\\fmv.dir\\app\\source\\main.c.obj -c C:\\code\\fmv\\app\\source\\main.c",
+  "file": "C:\\code\\fmv\\app\\source\\main.c",
+  "output": "CMakeFiles\\fmv.dir\\app\\source\\main.c.obj"
+},
+{
+  "directory": "C:/code/fmv/build",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DLOG_USE_COLOR -IC:/code/fmv/app/include -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/stb -IC:/code/fmv/third_party/glad/include -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/log.c/src -g -std=gnu11 -o CMakeFiles\\fmv.dir\\app\\source\\parsers\\obj.c.obj -c C:\\code\\fmv\\app\\source\\parsers\\obj.c",
+  "file": "C:\\code\\fmv\\app\\source\\parsers\\obj.c",
+  "output": "CMakeFiles\\fmv.dir\\app\\source\\parsers\\obj.c.obj"
+},
+{
+  "directory": "C:/code/fmv/build",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DCGLM_EXPORTS -Dcglm_EXPORTS -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src -g -std=gnu11 -Wall -o third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\euler.c.obj -c C:\\code\\fmv\\third_party\\cglm\\src\\euler.c",
+  "file": "C:\\code\\fmv\\third_party\\cglm\\src\\euler.c",
+  "output": "third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\euler.c.obj"
+},
+{
+  "directory": "C:/code/fmv/build",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DCGLM_EXPORTS -Dcglm_EXPORTS -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src -g -std=gnu11 -Wall -o third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\affine.c.obj -c C:\\code\\fmv\\third_party\\cglm\\src\\affine.c",
+  "file": "C:\\code\\fmv\\third_party\\cglm\\src\\affine.c",
+  "output": "third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\affine.c.obj"
+},
+{
+  "directory": "C:/code/fmv/build",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DCGLM_EXPORTS -Dcglm_EXPORTS -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src -g -std=gnu11 -Wall -o third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\io.c.obj -c C:\\code\\fmv\\third_party\\cglm\\src\\io.c",
+  "file": "C:\\code\\fmv\\third_party\\cglm\\src\\io.c",
+  "output": "third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\io.c.obj"
+},
+{
+  "directory": "C:/code/fmv/build",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DCGLM_EXPORTS -Dcglm_EXPORTS -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src -g -std=gnu11 -Wall -o third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\quat.c.obj -c C:\\code\\fmv\\third_party\\cglm\\src\\quat.c",
+  "file": "C:\\code\\fmv\\third_party\\cglm\\src\\quat.c",
+  "output": "third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\quat.c.obj"
+},
+{
+  "directory": "C:/code/fmv/build",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DCGLM_EXPORTS -Dcglm_EXPORTS -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src -g -std=gnu11 -Wall -o third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\cam.c.obj -c C:\\code\\fmv\\third_party\\cglm\\src\\cam.c",
+  "file": "C:\\code\\fmv\\third_party\\cglm\\src\\cam.c",
+  "output": "third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\cam.c.obj"
+},
+{
+  "directory": "C:/code/fmv/build",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DCGLM_EXPORTS -Dcglm_EXPORTS -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src -g -std=gnu11 -Wall -o third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\vec2.c.obj -c C:\\code\\fmv\\third_party\\cglm\\src\\vec2.c",
+  "file": "C:\\code\\fmv\\third_party\\cglm\\src\\vec2.c",
+  "output": "third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\vec2.c.obj"
+},
+{
+  "directory": "C:/code/fmv/build",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DCGLM_EXPORTS -Dcglm_EXPORTS -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src -g -std=gnu11 -Wall -o third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\ivec2.c.obj -c C:\\code\\fmv\\third_party\\cglm\\src\\ivec2.c",
+  "file": "C:\\code\\fmv\\third_party\\cglm\\src\\ivec2.c",
+  "output": "third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\ivec2.c.obj"
+},
+{
+  "directory": "C:/code/fmv/build",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DCGLM_EXPORTS -Dcglm_EXPORTS -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src -g -std=gnu11 -Wall -o third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\vec3.c.obj -c C:\\code\\fmv\\third_party\\cglm\\src\\vec3.c",
+  "file": "C:\\code\\fmv\\third_party\\cglm\\src\\vec3.c",
+  "output": "third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\vec3.c.obj"
+},
+{
+  "directory": "C:/code/fmv/build",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DCGLM_EXPORTS -Dcglm_EXPORTS -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src -g -std=gnu11 -Wall -o third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\ivec3.c.obj -c C:\\code\\fmv\\third_party\\cglm\\src\\ivec3.c",
+  "file": "C:\\code\\fmv\\third_party\\cglm\\src\\ivec3.c",
+  "output": "third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\ivec3.c.obj"
+},
+{
+  "directory": "C:/code/fmv/build",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DCGLM_EXPORTS -Dcglm_EXPORTS -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src -g -std=gnu11 -Wall -o third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\vec4.c.obj -c C:\\code\\fmv\\third_party\\cglm\\src\\vec4.c",
+  "file": "C:\\code\\fmv\\third_party\\cglm\\src\\vec4.c",
+  "output": "third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\vec4.c.obj"
+},
+{
+  "directory": "C:/code/fmv/build",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DCGLM_EXPORTS -Dcglm_EXPORTS -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src -g -std=gnu11 -Wall -o third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\ivec4.c.obj -c C:\\code\\fmv\\third_party\\cglm\\src\\ivec4.c",
+  "file": "C:\\code\\fmv\\third_party\\cglm\\src\\ivec4.c",
+  "output": "third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\ivec4.c.obj"
+},
+{
+  "directory": "C:/code/fmv/build",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DCGLM_EXPORTS -Dcglm_EXPORTS -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src -g -std=gnu11 -Wall -o third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\mat2.c.obj -c C:\\code\\fmv\\third_party\\cglm\\src\\mat2.c",
+  "file": "C:\\code\\fmv\\third_party\\cglm\\src\\mat2.c",
+  "output": "third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\mat2.c.obj"
+},
+{
+  "directory": "C:/code/fmv/build",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DCGLM_EXPORTS -Dcglm_EXPORTS -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src -g -std=gnu11 -Wall -o third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\mat2x3.c.obj -c C:\\code\\fmv\\third_party\\cglm\\src\\mat2x3.c",
+  "file": "C:\\code\\fmv\\third_party\\cglm\\src\\mat2x3.c",
+  "output": "third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\mat2x3.c.obj"
+},
+{
+  "directory": "C:/code/fmv/build",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DCGLM_EXPORTS -Dcglm_EXPORTS -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src -g -std=gnu11 -Wall -o third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\mat2x4.c.obj -c C:\\code\\fmv\\third_party\\cglm\\src\\mat2x4.c",
+  "file": "C:\\code\\fmv\\third_party\\cglm\\src\\mat2x4.c",
+  "output": "third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\mat2x4.c.obj"
+},
+{
+  "directory": "C:/code/fmv/build",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DCGLM_EXPORTS -Dcglm_EXPORTS -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src -g -std=gnu11 -Wall -o third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\mat3.c.obj -c C:\\code\\fmv\\third_party\\cglm\\src\\mat3.c",
+  "file": "C:\\code\\fmv\\third_party\\cglm\\src\\mat3.c",
+  "output": "third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\mat3.c.obj"
+},
+{
+  "directory": "C:/code/fmv/build",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DCGLM_EXPORTS -Dcglm_EXPORTS -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src -g -std=gnu11 -Wall -o third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\mat3x2.c.obj -c C:\\code\\fmv\\third_party\\cglm\\src\\mat3x2.c",
+  "file": "C:\\code\\fmv\\third_party\\cglm\\src\\mat3x2.c",
+  "output": "third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\mat3x2.c.obj"
+},
+{
+  "directory": "C:/code/fmv/build",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DCGLM_EXPORTS -Dcglm_EXPORTS -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src -g -std=gnu11 -Wall -o third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\mat3x4.c.obj -c C:\\code\\fmv\\third_party\\cglm\\src\\mat3x4.c",
+  "file": "C:\\code\\fmv\\third_party\\cglm\\src\\mat3x4.c",
+  "output": "third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\mat3x4.c.obj"
+},
+{
+  "directory": "C:/code/fmv/build",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DCGLM_EXPORTS -Dcglm_EXPORTS -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src -g -std=gnu11 -Wall -o third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\mat4.c.obj -c C:\\code\\fmv\\third_party\\cglm\\src\\mat4.c",
+  "file": "C:\\code\\fmv\\third_party\\cglm\\src\\mat4.c",
+  "output": "third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\mat4.c.obj"
+},
+{
+  "directory": "C:/code/fmv/build",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DCGLM_EXPORTS -Dcglm_EXPORTS -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src -g -std=gnu11 -Wall -o third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\mat4x2.c.obj -c C:\\code\\fmv\\third_party\\cglm\\src\\mat4x2.c",
+  "file": "C:\\code\\fmv\\third_party\\cglm\\src\\mat4x2.c",
+  "output": "third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\mat4x2.c.obj"
+},
+{
+  "directory": "C:/code/fmv/build",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DCGLM_EXPORTS -Dcglm_EXPORTS -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src -g -std=gnu11 -Wall -o third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\mat4x3.c.obj -c C:\\code\\fmv\\third_party\\cglm\\src\\mat4x3.c",
+  "file": "C:\\code\\fmv\\third_party\\cglm\\src\\mat4x3.c",
+  "output": "third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\mat4x3.c.obj"
+},
+{
+  "directory": "C:/code/fmv/build",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DCGLM_EXPORTS -Dcglm_EXPORTS -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src -g -std=gnu11 -Wall -o third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\plane.c.obj -c C:\\code\\fmv\\third_party\\cglm\\src\\plane.c",
+  "file": "C:\\code\\fmv\\third_party\\cglm\\src\\plane.c",
+  "output": "third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\plane.c.obj"
+},
+{
+  "directory": "C:/code/fmv/build",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DCGLM_EXPORTS -Dcglm_EXPORTS -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src -g -std=gnu11 -Wall -o third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\noise.c.obj -c C:\\code\\fmv\\third_party\\cglm\\src\\noise.c",
+  "file": "C:\\code\\fmv\\third_party\\cglm\\src\\noise.c",
+  "output": "third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\noise.c.obj"
+},
+{
+  "directory": "C:/code/fmv/build",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DCGLM_EXPORTS -Dcglm_EXPORTS -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src -g -std=gnu11 -Wall -o third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\frustum.c.obj -c C:\\code\\fmv\\third_party\\cglm\\src\\frustum.c",
+  "file": "C:\\code\\fmv\\third_party\\cglm\\src\\frustum.c",
+  "output": "third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\frustum.c.obj"
+},
+{
+  "directory": "C:/code/fmv/build",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DCGLM_EXPORTS -Dcglm_EXPORTS -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src -g -std=gnu11 -Wall -o third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\box.c.obj -c C:\\code\\fmv\\third_party\\cglm\\src\\box.c",
+  "file": "C:\\code\\fmv\\third_party\\cglm\\src\\box.c",
+  "output": "third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\box.c.obj"
+},
+{
+  "directory": "C:/code/fmv/build",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DCGLM_EXPORTS -Dcglm_EXPORTS -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src -g -std=gnu11 -Wall -o third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\aabb2d.c.obj -c C:\\code\\fmv\\third_party\\cglm\\src\\aabb2d.c",
+  "file": "C:\\code\\fmv\\third_party\\cglm\\src\\aabb2d.c",
+  "output": "third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\aabb2d.c.obj"
+},
+{
+  "directory": "C:/code/fmv/build",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DCGLM_EXPORTS -Dcglm_EXPORTS -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src -g -std=gnu11 -Wall -o third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\project.c.obj -c C:\\code\\fmv\\third_party\\cglm\\src\\project.c",
+  "file": "C:\\code\\fmv\\third_party\\cglm\\src\\project.c",
+  "output": "third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\project.c.obj"
+},
+{
+  "directory": "C:/code/fmv/build",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DCGLM_EXPORTS -Dcglm_EXPORTS -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src -g -std=gnu11 -Wall -o third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\sphere.c.obj -c C:\\code\\fmv\\third_party\\cglm\\src\\sphere.c",
+  "file": "C:\\code\\fmv\\third_party\\cglm\\src\\sphere.c",
+  "output": "third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\sphere.c.obj"
+},
+{
+  "directory": "C:/code/fmv/build",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DCGLM_EXPORTS -Dcglm_EXPORTS -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src -g -std=gnu11 -Wall -o third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\ease.c.obj -c C:\\code\\fmv\\third_party\\cglm\\src\\ease.c",
+  "file": "C:\\code\\fmv\\third_party\\cglm\\src\\ease.c",
+  "output": "third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\ease.c.obj"
+},
+{
+  "directory": "C:/code/fmv/build",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DCGLM_EXPORTS -Dcglm_EXPORTS -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src -g -std=gnu11 -Wall -o third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\curve.c.obj -c C:\\code\\fmv\\third_party\\cglm\\src\\curve.c",
+  "file": "C:\\code\\fmv\\third_party\\cglm\\src\\curve.c",
+  "output": "third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\curve.c.obj"
+},
+{
+  "directory": "C:/code/fmv/build",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DCGLM_EXPORTS -Dcglm_EXPORTS -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src -g -std=gnu11 -Wall -o third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\bezier.c.obj -c C:\\code\\fmv\\third_party\\cglm\\src\\bezier.c",
+  "file": "C:\\code\\fmv\\third_party\\cglm\\src\\bezier.c",
+  "output": "third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\bezier.c.obj"
+},
+{
+  "directory": "C:/code/fmv/build",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DCGLM_EXPORTS -Dcglm_EXPORTS -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src -g -std=gnu11 -Wall -o third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\ray.c.obj -c C:\\code\\fmv\\third_party\\cglm\\src\\ray.c",
+  "file": "C:\\code\\fmv\\third_party\\cglm\\src\\ray.c",
+  "output": "third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\ray.c.obj"
+},
+{
+  "directory": "C:/code/fmv/build",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DCGLM_EXPORTS -Dcglm_EXPORTS -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src -g -std=gnu11 -Wall -o third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\affine2d.c.obj -c C:\\code\\fmv\\third_party\\cglm\\src\\affine2d.c",
+  "file": "C:\\code\\fmv\\third_party\\cglm\\src\\affine2d.c",
+  "output": "third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\affine2d.c.obj"
+},
+{
+  "directory": "C:/code/fmv/build",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DCGLM_EXPORTS -Dcglm_EXPORTS -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src -g -std=gnu11 -Wall -o third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\clipspace\\ortho_lh_no.c.obj -c C:\\code\\fmv\\third_party\\cglm\\src\\clipspace\\ortho_lh_no.c",
+  "file": "C:\\code\\fmv\\third_party\\cglm\\src\\clipspace\\ortho_lh_no.c",
+  "output": "third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\clipspace\\ortho_lh_no.c.obj"
+},
+{
+  "directory": "C:/code/fmv/build",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DCGLM_EXPORTS -Dcglm_EXPORTS -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src -g -std=gnu11 -Wall -o third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\clipspace\\ortho_lh_zo.c.obj -c C:\\code\\fmv\\third_party\\cglm\\src\\clipspace\\ortho_lh_zo.c",
+  "file": "C:\\code\\fmv\\third_party\\cglm\\src\\clipspace\\ortho_lh_zo.c",
+  "output": "third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\clipspace\\ortho_lh_zo.c.obj"
+},
+{
+  "directory": "C:/code/fmv/build",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DCGLM_EXPORTS -Dcglm_EXPORTS -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src -g -std=gnu11 -Wall -o third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\clipspace\\ortho_rh_no.c.obj -c C:\\code\\fmv\\third_party\\cglm\\src\\clipspace\\ortho_rh_no.c",
+  "file": "C:\\code\\fmv\\third_party\\cglm\\src\\clipspace\\ortho_rh_no.c",
+  "output": "third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\clipspace\\ortho_rh_no.c.obj"
+},
+{
+  "directory": "C:/code/fmv/build",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DCGLM_EXPORTS -Dcglm_EXPORTS -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src -g -std=gnu11 -Wall -o third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\clipspace\\ortho_rh_zo.c.obj -c C:\\code\\fmv\\third_party\\cglm\\src\\clipspace\\ortho_rh_zo.c",
+  "file": "C:\\code\\fmv\\third_party\\cglm\\src\\clipspace\\ortho_rh_zo.c",
+  "output": "third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\clipspace\\ortho_rh_zo.c.obj"
+},
+{
+  "directory": "C:/code/fmv/build",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DCGLM_EXPORTS -Dcglm_EXPORTS -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src -g -std=gnu11 -Wall -o third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\clipspace\\persp_lh_no.c.obj -c C:\\code\\fmv\\third_party\\cglm\\src\\clipspace\\persp_lh_no.c",
+  "file": "C:\\code\\fmv\\third_party\\cglm\\src\\clipspace\\persp_lh_no.c",
+  "output": "third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\clipspace\\persp_lh_no.c.obj"
+},
+{
+  "directory": "C:/code/fmv/build",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DCGLM_EXPORTS -Dcglm_EXPORTS -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src -g -std=gnu11 -Wall -o third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\clipspace\\persp_lh_zo.c.obj -c C:\\code\\fmv\\third_party\\cglm\\src\\clipspace\\persp_lh_zo.c",
+  "file": "C:\\code\\fmv\\third_party\\cglm\\src\\clipspace\\persp_lh_zo.c",
+  "output": "third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\clipspace\\persp_lh_zo.c.obj"
+},
+{
+  "directory": "C:/code/fmv/build",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DCGLM_EXPORTS -Dcglm_EXPORTS -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src -g -std=gnu11 -Wall -o third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\clipspace\\persp_rh_no.c.obj -c C:\\code\\fmv\\third_party\\cglm\\src\\clipspace\\persp_rh_no.c",
+  "file": "C:\\code\\fmv\\third_party\\cglm\\src\\clipspace\\persp_rh_no.c",
+  "output": "third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\clipspace\\persp_rh_no.c.obj"
+},
+{
+  "directory": "C:/code/fmv/build",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DCGLM_EXPORTS -Dcglm_EXPORTS -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src -g -std=gnu11 -Wall -o third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\clipspace\\persp_rh_zo.c.obj -c C:\\code\\fmv\\third_party\\cglm\\src\\clipspace\\persp_rh_zo.c",
+  "file": "C:\\code\\fmv\\third_party\\cglm\\src\\clipspace\\persp_rh_zo.c",
+  "output": "third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\clipspace\\persp_rh_zo.c.obj"
+},
+{
+  "directory": "C:/code/fmv/build",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DCGLM_EXPORTS -Dcglm_EXPORTS -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src -g -std=gnu11 -Wall -o third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\clipspace\\view_lh_no.c.obj -c C:\\code\\fmv\\third_party\\cglm\\src\\clipspace\\view_lh_no.c",
+  "file": "C:\\code\\fmv\\third_party\\cglm\\src\\clipspace\\view_lh_no.c",
+  "output": "third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\clipspace\\view_lh_no.c.obj"
+},
+{
+  "directory": "C:/code/fmv/build",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DCGLM_EXPORTS -Dcglm_EXPORTS -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src -g -std=gnu11 -Wall -o third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\clipspace\\view_lh_zo.c.obj -c C:\\code\\fmv\\third_party\\cglm\\src\\clipspace\\view_lh_zo.c",
+  "file": "C:\\code\\fmv\\third_party\\cglm\\src\\clipspace\\view_lh_zo.c",
+  "output": "third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\clipspace\\view_lh_zo.c.obj"
+},
+{
+  "directory": "C:/code/fmv/build",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DCGLM_EXPORTS -Dcglm_EXPORTS -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src -g -std=gnu11 -Wall -o third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\clipspace\\view_rh_no.c.obj -c C:\\code\\fmv\\third_party\\cglm\\src\\clipspace\\view_rh_no.c",
+  "file": "C:\\code\\fmv\\third_party\\cglm\\src\\clipspace\\view_rh_no.c",
+  "output": "third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\clipspace\\view_rh_no.c.obj"
+},
+{
+  "directory": "C:/code/fmv/build",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DCGLM_EXPORTS -Dcglm_EXPORTS -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src -g -std=gnu11 -Wall -o third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\clipspace\\view_rh_zo.c.obj -c C:\\code\\fmv\\third_party\\cglm\\src\\clipspace\\view_rh_zo.c",
+  "file": "C:\\code\\fmv\\third_party\\cglm\\src\\clipspace\\view_rh_zo.c",
+  "output": "third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\clipspace\\view_rh_zo.c.obj"
+},
+{
+  "directory": "C:/code/fmv/build",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DCGLM_EXPORTS -Dcglm_EXPORTS -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src -g -std=gnu11 -Wall -o third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\clipspace\\project_no.c.obj -c C:\\code\\fmv\\third_party\\cglm\\src\\clipspace\\project_no.c",
+  "file": "C:\\code\\fmv\\third_party\\cglm\\src\\clipspace\\project_no.c",
+  "output": "third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\clipspace\\project_no.c.obj"
+},
+{
+  "directory": "C:/code/fmv/build",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DCGLM_EXPORTS -Dcglm_EXPORTS -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src -g -std=gnu11 -Wall -o third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\clipspace\\project_zo.c.obj -c C:\\code\\fmv\\third_party\\cglm\\src\\clipspace\\project_zo.c",
+  "file": "C:\\code\\fmv\\third_party\\cglm\\src\\clipspace\\project_zo.c",
+  "output": "third_party\\cglm\\CMakeFiles\\cglm.dir\\src\\clipspace\\project_zo.c.obj"
+},
+{
+  "directory": "C:/code/fmv/build",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/glfw/src -IC:/code/fmv/build/third_party/glfw/src -g -std=c99 -Wall -o third_party\\glfw\\src\\CMakeFiles\\glfw.dir\\context.c.obj -c C:\\code\\fmv\\third_party\\glfw\\src\\context.c",
+  "file": "C:\\code\\fmv\\third_party\\glfw\\src\\context.c",
+  "output": "third_party\\glfw\\src\\CMakeFiles\\glfw.dir\\context.c.obj"
+},
+{
+  "directory": "C:/code/fmv/build",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/glfw/src -IC:/code/fmv/build/third_party/glfw/src -g -std=c99 -Wall -o third_party\\glfw\\src\\CMakeFiles\\glfw.dir\\init.c.obj -c C:\\code\\fmv\\third_party\\glfw\\src\\init.c",
+  "file": "C:\\code\\fmv\\third_party\\glfw\\src\\init.c",
+  "output": "third_party\\glfw\\src\\CMakeFiles\\glfw.dir\\init.c.obj"
+},
+{
+  "directory": "C:/code/fmv/build",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/glfw/src -IC:/code/fmv/build/third_party/glfw/src -g -std=c99 -Wall -o third_party\\glfw\\src\\CMakeFiles\\glfw.dir\\input.c.obj -c C:\\code\\fmv\\third_party\\glfw\\src\\input.c",
+  "file": "C:\\code\\fmv\\third_party\\glfw\\src\\input.c",
+  "output": "third_party\\glfw\\src\\CMakeFiles\\glfw.dir\\input.c.obj"
+},
+{
+  "directory": "C:/code/fmv/build",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/glfw/src -IC:/code/fmv/build/third_party/glfw/src -g -std=c99 -Wall -o third_party\\glfw\\src\\CMakeFiles\\glfw.dir\\monitor.c.obj -c C:\\code\\fmv\\third_party\\glfw\\src\\monitor.c",
+  "file": "C:\\code\\fmv\\third_party\\glfw\\src\\monitor.c",
+  "output": "third_party\\glfw\\src\\CMakeFiles\\glfw.dir\\monitor.c.obj"
+},
+{
+  "directory": "C:/code/fmv/build",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/glfw/src -IC:/code/fmv/build/third_party/glfw/src -g -std=c99 -Wall -o third_party\\glfw\\src\\CMakeFiles\\glfw.dir\\platform.c.obj -c C:\\code\\fmv\\third_party\\glfw\\src\\platform.c",
+  "file": "C:\\code\\fmv\\third_party\\glfw\\src\\platform.c",
+  "output": "third_party\\glfw\\src\\CMakeFiles\\glfw.dir\\platform.c.obj"
+},
+{
+  "directory": "C:/code/fmv/build",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/glfw/src -IC:/code/fmv/build/third_party/glfw/src -g -std=c99 -Wall -o third_party\\glfw\\src\\CMakeFiles\\glfw.dir\\vulkan.c.obj -c C:\\code\\fmv\\third_party\\glfw\\src\\vulkan.c",
+  "file": "C:\\code\\fmv\\third_party\\glfw\\src\\vulkan.c",
+  "output": "third_party\\glfw\\src\\CMakeFiles\\glfw.dir\\vulkan.c.obj"
+},
+{
+  "directory": "C:/code/fmv/build",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/glfw/src -IC:/code/fmv/build/third_party/glfw/src -g -std=c99 -Wall -o third_party\\glfw\\src\\CMakeFiles\\glfw.dir\\window.c.obj -c C:\\code\\fmv\\third_party\\glfw\\src\\window.c",
+  "file": "C:\\code\\fmv\\third_party\\glfw\\src\\window.c",
+  "output": "third_party\\glfw\\src\\CMakeFiles\\glfw.dir\\window.c.obj"
+},
+{
+  "directory": "C:/code/fmv/build",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/glfw/src -IC:/code/fmv/build/third_party/glfw/src -g -std=c99 -Wall -o third_party\\glfw\\src\\CMakeFiles\\glfw.dir\\egl_context.c.obj -c C:\\code\\fmv\\third_party\\glfw\\src\\egl_context.c",
+  "file": "C:\\code\\fmv\\third_party\\glfw\\src\\egl_context.c",
+  "output": "third_party\\glfw\\src\\CMakeFiles\\glfw.dir\\egl_context.c.obj"
+},
+{
+  "directory": "C:/code/fmv/build",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/glfw/src -IC:/code/fmv/build/third_party/glfw/src -g -std=c99 -Wall -o third_party\\glfw\\src\\CMakeFiles\\glfw.dir\\osmesa_context.c.obj -c C:\\code\\fmv\\third_party\\glfw\\src\\osmesa_context.c",
+  "file": "C:\\code\\fmv\\third_party\\glfw\\src\\osmesa_context.c",
+  "output": "third_party\\glfw\\src\\CMakeFiles\\glfw.dir\\osmesa_context.c.obj"
+},
+{
+  "directory": "C:/code/fmv/build",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/glfw/src -IC:/code/fmv/build/third_party/glfw/src -g -std=c99 -Wall -o third_party\\glfw\\src\\CMakeFiles\\glfw.dir\\null_init.c.obj -c C:\\code\\fmv\\third_party\\glfw\\src\\null_init.c",
+  "file": "C:\\code\\fmv\\third_party\\glfw\\src\\null_init.c",
+  "output": "third_party\\glfw\\src\\CMakeFiles\\glfw.dir\\null_init.c.obj"
+},
+{
+  "directory": "C:/code/fmv/build",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/glfw/src -IC:/code/fmv/build/third_party/glfw/src -g -std=c99 -Wall -o third_party\\glfw\\src\\CMakeFiles\\glfw.dir\\null_monitor.c.obj -c C:\\code\\fmv\\third_party\\glfw\\src\\null_monitor.c",
+  "file": "C:\\code\\fmv\\third_party\\glfw\\src\\null_monitor.c",
+  "output": "third_party\\glfw\\src\\CMakeFiles\\glfw.dir\\null_monitor.c.obj"
+},
+{
+  "directory": "C:/code/fmv/build",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/glfw/src -IC:/code/fmv/build/third_party/glfw/src -g -std=c99 -Wall -o third_party\\glfw\\src\\CMakeFiles\\glfw.dir\\null_window.c.obj -c C:\\code\\fmv\\third_party\\glfw\\src\\null_window.c",
+  "file": "C:\\code\\fmv\\third_party\\glfw\\src\\null_window.c",
+  "output": "third_party\\glfw\\src\\CMakeFiles\\glfw.dir\\null_window.c.obj"
+},
+{
+  "directory": "C:/code/fmv/build",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/glfw/src -IC:/code/fmv/build/third_party/glfw/src -g -std=c99 -Wall -o third_party\\glfw\\src\\CMakeFiles\\glfw.dir\\null_joystick.c.obj -c C:\\code\\fmv\\third_party\\glfw\\src\\null_joystick.c",
+  "file": "C:\\code\\fmv\\third_party\\glfw\\src\\null_joystick.c",
+  "output": "third_party\\glfw\\src\\CMakeFiles\\glfw.dir\\null_joystick.c.obj"
+},
+{
+  "directory": "C:/code/fmv/build",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/glfw/src -IC:/code/fmv/build/third_party/glfw/src -g -std=c99 -Wall -o third_party\\glfw\\src\\CMakeFiles\\glfw.dir\\win32_module.c.obj -c C:\\code\\fmv\\third_party\\glfw\\src\\win32_module.c",
+  "file": "C:\\code\\fmv\\third_party\\glfw\\src\\win32_module.c",
+  "output": "third_party\\glfw\\src\\CMakeFiles\\glfw.dir\\win32_module.c.obj"
+},
+{
+  "directory": "C:/code/fmv/build",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/glfw/src -IC:/code/fmv/build/third_party/glfw/src -g -std=c99 -Wall -o third_party\\glfw\\src\\CMakeFiles\\glfw.dir\\win32_time.c.obj -c C:\\code\\fmv\\third_party\\glfw\\src\\win32_time.c",
+  "file": "C:\\code\\fmv\\third_party\\glfw\\src\\win32_time.c",
+  "output": "third_party\\glfw\\src\\CMakeFiles\\glfw.dir\\win32_time.c.obj"
+},
+{
+  "directory": "C:/code/fmv/build",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/glfw/src -IC:/code/fmv/build/third_party/glfw/src -g -std=c99 -Wall -o third_party\\glfw\\src\\CMakeFiles\\glfw.dir\\win32_thread.c.obj -c C:\\code\\fmv\\third_party\\glfw\\src\\win32_thread.c",
+  "file": "C:\\code\\fmv\\third_party\\glfw\\src\\win32_thread.c",
+  "output": "third_party\\glfw\\src\\CMakeFiles\\glfw.dir\\win32_thread.c.obj"
+},
+{
+  "directory": "C:/code/fmv/build",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/glfw/src -IC:/code/fmv/build/third_party/glfw/src -g -std=c99 -Wall -o third_party\\glfw\\src\\CMakeFiles\\glfw.dir\\win32_init.c.obj -c C:\\code\\fmv\\third_party\\glfw\\src\\win32_init.c",
+  "file": "C:\\code\\fmv\\third_party\\glfw\\src\\win32_init.c",
+  "output": "third_party\\glfw\\src\\CMakeFiles\\glfw.dir\\win32_init.c.obj"
+},
+{
+  "directory": "C:/code/fmv/build",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/glfw/src -IC:/code/fmv/build/third_party/glfw/src -g -std=c99 -Wall -o third_party\\glfw\\src\\CMakeFiles\\glfw.dir\\win32_joystick.c.obj -c C:\\code\\fmv\\third_party\\glfw\\src\\win32_joystick.c",
+  "file": "C:\\code\\fmv\\third_party\\glfw\\src\\win32_joystick.c",
+  "output": "third_party\\glfw\\src\\CMakeFiles\\glfw.dir\\win32_joystick.c.obj"
+},
+{
+  "directory": "C:/code/fmv/build",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/glfw/src -IC:/code/fmv/build/third_party/glfw/src -g -std=c99 -Wall -o third_party\\glfw\\src\\CMakeFiles\\glfw.dir\\win32_monitor.c.obj -c C:\\code\\fmv\\third_party\\glfw\\src\\win32_monitor.c",
+  "file": "C:\\code\\fmv\\third_party\\glfw\\src\\win32_monitor.c",
+  "output": "third_party\\glfw\\src\\CMakeFiles\\glfw.dir\\win32_monitor.c.obj"
+},
+{
+  "directory": "C:/code/fmv/build",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/glfw/src -IC:/code/fmv/build/third_party/glfw/src -g -std=c99 -Wall -o third_party\\glfw\\src\\CMakeFiles\\glfw.dir\\win32_window.c.obj -c C:\\code\\fmv\\third_party\\glfw\\src\\win32_window.c",
+  "file": "C:\\code\\fmv\\third_party\\glfw\\src\\win32_window.c",
+  "output": "third_party\\glfw\\src\\CMakeFiles\\glfw.dir\\win32_window.c.obj"
+},
+{
+  "directory": "C:/code/fmv/build",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/glfw/src -IC:/code/fmv/build/third_party/glfw/src -g -std=c99 -Wall -o third_party\\glfw\\src\\CMakeFiles\\glfw.dir\\wgl_context.c.obj -c C:\\code\\fmv\\third_party\\glfw\\src\\wgl_context.c",
+  "file": "C:\\code\\fmv\\third_party\\glfw\\src\\wgl_context.c",
+  "output": "third_party\\glfw\\src\\CMakeFiles\\glfw.dir\\wgl_context.c.obj"
+}
+]

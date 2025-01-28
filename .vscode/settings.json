@@ -1,0 +1,9 @@
+{
+    "C_Cpp.codeAnalysis.clangTidy.checks.disabled": [
+        "clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling"
+    ],
+    "files.associations": {
+        "glfw3.h": "c",
+        "obj.h": "c"
+    }
+}

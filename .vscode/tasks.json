@@ -1,0 +1,34 @@
+{
+    "type": "setting",
+    "settings": {
+        "tasks.json": {
+            "version": "2.0.0",
+            "tasks": [
+                {
+                    "type": "cppbuild",
+                    "label": "C/C++: Release Build",
+                    "command": "gcc",
+                    "args": [
+                        "-O3",
+                        "-DNDEBUG",
+                        "-march=native",
+                        "-flto",
+                        "${file}",
+                        "-o",
+                        "${fileDirname}/${fileBasenameNoExtension}"
+                    ],
+                    "options": {
+                        "cwd": "${workspaceFolder}"
+                    },
+                    "problemMatcher": [
+                        "$gcc"
+                    ],
+                    "group": {
+                        "kind": "build",
+                        "isDefault": true
+                    }
+                }
+            ]
+        }
+    }
+}
