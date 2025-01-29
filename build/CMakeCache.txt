@@ -215,7 +215,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=fmv
+CMAKE_PROJECT_NAME:STATIC=fov
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION:STATIC=0.9.5
@@ -393,6 +393,15 @@ fmv_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 fmv_SOURCE_DIR:STATIC=C:/code/fmv
+
+//Value Computed by CMake
+fov_BINARY_DIR:STATIC=C:/code/fmv/build
+
+//Value Computed by CMake
+fov_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+fov_SOURCE_DIR:STATIC=C:/code/fmv
 
 
 ########################

@@ -13,69 +13,69 @@
 },
 {
   "directory": "C:/code/fmv/build",
-  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DLOG_USE_COLOR -IC:/code/fmv/app/include -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/stb -IC:/code/fmv/third_party/glad/include -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/log.c/src -Wall -Wextra -g -std=gnu11 -o CMakeFiles\\fmv.dir\\app\\source\\core\\model.c.obj -c C:\\code\\fmv\\app\\source\\core\\model.c",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DLOG_USE_COLOR -IC:/code/fmv/app/include -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/stb -IC:/code/fmv/third_party/glad/include -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/log.c/src -Wall -Wextra -g -std=gnu11 -o CMakeFiles\\fov.dir\\app\\source\\core\\model.c.obj -c C:\\code\\fmv\\app\\source\\core\\model.c",
   "file": "C:\\code\\fmv\\app\\source\\core\\model.c",
-  "output": "CMakeFiles\\fmv.dir\\app\\source\\core\\model.c.obj"
+  "output": "CMakeFiles\\fov.dir\\app\\source\\core\\model.c.obj"
 },
 {
   "directory": "C:/code/fmv/build",
-  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DLOG_USE_COLOR -IC:/code/fmv/app/include -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/stb -IC:/code/fmv/third_party/glad/include -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/log.c/src -Wall -Wextra -g -std=gnu11 -o CMakeFiles\\fmv.dir\\app\\source\\core\\scene.c.obj -c C:\\code\\fmv\\app\\source\\core\\scene.c",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DLOG_USE_COLOR -IC:/code/fmv/app/include -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/stb -IC:/code/fmv/third_party/glad/include -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/log.c/src -Wall -Wextra -g -std=gnu11 -o CMakeFiles\\fov.dir\\app\\source\\core\\scene.c.obj -c C:\\code\\fmv\\app\\source\\core\\scene.c",
   "file": "C:\\code\\fmv\\app\\source\\core\\scene.c",
-  "output": "CMakeFiles\\fmv.dir\\app\\source\\core\\scene.c.obj"
+  "output": "CMakeFiles\\fov.dir\\app\\source\\core\\scene.c.obj"
 },
 {
   "directory": "C:/code/fmv/build",
-  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DLOG_USE_COLOR -IC:/code/fmv/app/include -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/stb -IC:/code/fmv/third_party/glad/include -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/log.c/src -Wall -Wextra -g -std=gnu11 -o CMakeFiles\\fmv.dir\\app\\source\\engine\\arcball.c.obj -c C:\\code\\fmv\\app\\source\\engine\\arcball.c",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DLOG_USE_COLOR -IC:/code/fmv/app/include -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/stb -IC:/code/fmv/third_party/glad/include -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/log.c/src -Wall -Wextra -g -std=gnu11 -o CMakeFiles\\fov.dir\\app\\source\\engine\\arcball.c.obj -c C:\\code\\fmv\\app\\source\\engine\\arcball.c",
   "file": "C:\\code\\fmv\\app\\source\\engine\\arcball.c",
-  "output": "CMakeFiles\\fmv.dir\\app\\source\\engine\\arcball.c.obj"
+  "output": "CMakeFiles\\fov.dir\\app\\source\\engine\\arcball.c.obj"
 },
 {
   "directory": "C:/code/fmv/build",
-  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DLOG_USE_COLOR -IC:/code/fmv/app/include -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/stb -IC:/code/fmv/third_party/glad/include -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/log.c/src -Wall -Wextra -g -std=gnu11 -o CMakeFiles\\fmv.dir\\app\\source\\engine\\draw.c.obj -c C:\\code\\fmv\\app\\source\\engine\\draw.c",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DLOG_USE_COLOR -IC:/code/fmv/app/include -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/stb -IC:/code/fmv/third_party/glad/include -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/log.c/src -Wall -Wextra -g -std=gnu11 -o CMakeFiles\\fov.dir\\app\\source\\engine\\draw.c.obj -c C:\\code\\fmv\\app\\source\\engine\\draw.c",
   "file": "C:\\code\\fmv\\app\\source\\engine\\draw.c",
-  "output": "CMakeFiles\\fmv.dir\\app\\source\\engine\\draw.c.obj"
+  "output": "CMakeFiles\\fov.dir\\app\\source\\engine\\draw.c.obj"
 },
 {
   "directory": "C:/code/fmv/build",
-  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DLOG_USE_COLOR -IC:/code/fmv/app/include -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/stb -IC:/code/fmv/third_party/glad/include -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/log.c/src -Wall -Wextra -g -std=gnu11 -o CMakeFiles\\fmv.dir\\app\\source\\engine\\file.c.obj -c C:\\code\\fmv\\app\\source\\engine\\file.c",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DLOG_USE_COLOR -IC:/code/fmv/app/include -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/stb -IC:/code/fmv/third_party/glad/include -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/log.c/src -Wall -Wextra -g -std=gnu11 -o CMakeFiles\\fov.dir\\app\\source\\engine\\file.c.obj -c C:\\code\\fmv\\app\\source\\engine\\file.c",
   "file": "C:\\code\\fmv\\app\\source\\engine\\file.c",
-  "output": "CMakeFiles\\fmv.dir\\app\\source\\engine\\file.c.obj"
+  "output": "CMakeFiles\\fov.dir\\app\\source\\engine\\file.c.obj"
 },
 {
   "directory": "C:/code/fmv/build",
-  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DLOG_USE_COLOR -IC:/code/fmv/app/include -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/stb -IC:/code/fmv/third_party/glad/include -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/log.c/src -Wall -Wextra -g -std=gnu11 -o CMakeFiles\\fmv.dir\\app\\source\\engine\\input.c.obj -c C:\\code\\fmv\\app\\source\\engine\\input.c",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DLOG_USE_COLOR -IC:/code/fmv/app/include -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/stb -IC:/code/fmv/third_party/glad/include -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/log.c/src -Wall -Wextra -g -std=gnu11 -o CMakeFiles\\fov.dir\\app\\source\\engine\\input.c.obj -c C:\\code\\fmv\\app\\source\\engine\\input.c",
   "file": "C:\\code\\fmv\\app\\source\\engine\\input.c",
-  "output": "CMakeFiles\\fmv.dir\\app\\source\\engine\\input.c.obj"
+  "output": "CMakeFiles\\fov.dir\\app\\source\\engine\\input.c.obj"
 },
 {
   "directory": "C:/code/fmv/build",
-  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DLOG_USE_COLOR -IC:/code/fmv/app/include -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/stb -IC:/code/fmv/third_party/glad/include -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/log.c/src -Wall -Wextra -g -std=gnu11 -o CMakeFiles\\fmv.dir\\app\\source\\engine\\orbit.c.obj -c C:\\code\\fmv\\app\\source\\engine\\orbit.c",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DLOG_USE_COLOR -IC:/code/fmv/app/include -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/stb -IC:/code/fmv/third_party/glad/include -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/log.c/src -Wall -Wextra -g -std=gnu11 -o CMakeFiles\\fov.dir\\app\\source\\engine\\orbit.c.obj -c C:\\code\\fmv\\app\\source\\engine\\orbit.c",
   "file": "C:\\code\\fmv\\app\\source\\engine\\orbit.c",
-  "output": "CMakeFiles\\fmv.dir\\app\\source\\engine\\orbit.c.obj"
+  "output": "CMakeFiles\\fov.dir\\app\\source\\engine\\orbit.c.obj"
 },
 {
   "directory": "C:/code/fmv/build",
-  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DLOG_USE_COLOR -IC:/code/fmv/app/include -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/stb -IC:/code/fmv/third_party/glad/include -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/log.c/src -Wall -Wextra -g -std=gnu11 -o CMakeFiles\\fmv.dir\\app\\source\\engine\\shader.c.obj -c C:\\code\\fmv\\app\\source\\engine\\shader.c",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DLOG_USE_COLOR -IC:/code/fmv/app/include -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/stb -IC:/code/fmv/third_party/glad/include -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/log.c/src -Wall -Wextra -g -std=gnu11 -o CMakeFiles\\fov.dir\\app\\source\\engine\\shader.c.obj -c C:\\code\\fmv\\app\\source\\engine\\shader.c",
   "file": "C:\\code\\fmv\\app\\source\\engine\\shader.c",
-  "output": "CMakeFiles\\fmv.dir\\app\\source\\engine\\shader.c.obj"
+  "output": "CMakeFiles\\fov.dir\\app\\source\\engine\\shader.c.obj"
 },
 {
   "directory": "C:/code/fmv/build",
-  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DLOG_USE_COLOR -IC:/code/fmv/app/include -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/stb -IC:/code/fmv/third_party/glad/include -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/log.c/src -Wall -Wextra -g -std=gnu11 -o CMakeFiles\\fmv.dir\\app\\source\\engine\\text.c.obj -c C:\\code\\fmv\\app\\source\\engine\\text.c",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DLOG_USE_COLOR -IC:/code/fmv/app/include -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/stb -IC:/code/fmv/third_party/glad/include -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/log.c/src -Wall -Wextra -g -std=gnu11 -o CMakeFiles\\fov.dir\\app\\source\\engine\\text.c.obj -c C:\\code\\fmv\\app\\source\\engine\\text.c",
   "file": "C:\\code\\fmv\\app\\source\\engine\\text.c",
-  "output": "CMakeFiles\\fmv.dir\\app\\source\\engine\\text.c.obj"
+  "output": "CMakeFiles\\fov.dir\\app\\source\\engine\\text.c.obj"
 },
 {
   "directory": "C:/code/fmv/build",
-  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DLOG_USE_COLOR -IC:/code/fmv/app/include -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/stb -IC:/code/fmv/third_party/glad/include -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/log.c/src -Wall -Wextra -g -std=gnu11 -o CMakeFiles\\fmv.dir\\app\\source\\main.c.obj -c C:\\code\\fmv\\app\\source\\main.c",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DLOG_USE_COLOR -IC:/code/fmv/app/include -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/stb -IC:/code/fmv/third_party/glad/include -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/log.c/src -Wall -Wextra -g -std=gnu11 -o CMakeFiles\\fov.dir\\app\\source\\main.c.obj -c C:\\code\\fmv\\app\\source\\main.c",
   "file": "C:\\code\\fmv\\app\\source\\main.c",
-  "output": "CMakeFiles\\fmv.dir\\app\\source\\main.c.obj"
+  "output": "CMakeFiles\\fov.dir\\app\\source\\main.c.obj"
 },
 {
   "directory": "C:/code/fmv/build",
-  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DLOG_USE_COLOR -IC:/code/fmv/app/include -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/stb -IC:/code/fmv/third_party/glad/include -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/log.c/src -Wall -Wextra -g -std=gnu11 -o CMakeFiles\\fmv.dir\\app\\source\\parsers\\obj.c.obj -c C:\\code\\fmv\\app\\source\\parsers\\obj.c",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DLOG_USE_COLOR -IC:/code/fmv/app/include -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/stb -IC:/code/fmv/third_party/glad/include -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/log.c/src -Wall -Wextra -g -std=gnu11 -o CMakeFiles\\fov.dir\\app\\source\\parsers\\obj.c.obj -c C:\\code\\fmv\\app\\source\\parsers\\obj.c",
   "file": "C:\\code\\fmv\\app\\source\\parsers\\obj.c",
-  "output": "CMakeFiles\\fmv.dir\\app\\source\\parsers\\obj.c.obj"
+  "output": "CMakeFiles\\fov.dir\\app\\source\\parsers\\obj.c.obj"
 },
 {
   "directory": "C:/code/fmv/build",
