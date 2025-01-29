@@ -86,7 +86,7 @@ static const char* fs_source = "#version 460 core\n"
                                "    vec3 dx = dFdx(FragPos);\n"
                                "    vec3 dy = dFdy(FragPos);\n"
                                "    vec3 normal = normalize(cross(dx, dy));\n"
-                               "    vec3 lightDir = normalize(vec3(1.0, 1.0, -1.0));\n"
+                               "    vec3 lightDir = normalize(vec3(1.0, 10.0, -1.0));\n"
                                "    float diff = max(dot(normal, lightDir), 0.0);\n"
                                "    vec3 baseColor = vec3(0.8, 0.8, 0.8);\n"
                                "    vec3 ambient = 0.2 * baseColor;\n"
@@ -224,6 +224,7 @@ void model_render(const gpu_model_t* g, mat4 proj, mat4 view)
         glUniformMatrix4fv(glGetUniformLocation(g->program, "uView"), 1, GL_FALSE, (float*)view);
     }
 
+    // glm_rotate(g->model, 90.0f, (vec3) { 1.0f, 0.0f, 0.0f });
     glUniformMatrix4fv(glGetUniformLocation(g->program, "uModel"), 1, GL_FALSE, (float*)g->model);
     glUniform3fv(glGetUniformLocation(g->program, "uModelMin"), 1, (float*)g->min_vertex);
     glUniform3fv(glGetUniformLocation(g->program, "uModelMax"), 1, (float*)g->max_vertex);
@@ -233,13 +234,13 @@ void model_render(const gpu_model_t* g, mat4 proj, mat4 view)
     glBindVertexArray(0);
 }
 
-unsigned int model_get_size_mb(const model_t* m)
+float model_get_size_mb(const model_t* m)
 {
-    unsigned int mbs = ((m->vertex_count * sizeof(double) +       //
-                         m->indice_count * sizeof(unsigned int) + //
-                         m->normal_count * sizeof(float) +        //
-                         m->texcrd_count * sizeof(float))         //
-                        / (1024.0f * 1024.0f));
+    float mbs = ((m->vertex_count * sizeof(double) +       //
+                  m->indice_count * sizeof(unsigned int) + //
+                  m->normal_count * sizeof(float) +        //
+                  m->texcrd_count * sizeof(float))         //
+                 / (1024.0f * 1024.0f));
 
     return mbs;
 }

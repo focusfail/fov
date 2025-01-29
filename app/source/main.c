@@ -3,60 +3,61 @@
 #include <GLFW/glfw3.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <time.h>
 
-#include "engine/arcball.h"
 #include "engine/create_window.h"
 #include "engine/input.h"
+#include "engine/orbit.h"
 #include "engine/text.h"
 
 #include "parsers/obj.h"
+struct view_s {
+    int  window_width;
+    int  window_height;
+    mat4 projection;
+};
 
-arcball_t arcball;
+orbit_cam_t   cam;
+struct view_s view;
 
-void scroll_callback(GLFWwindow* window, double xoffset, double yoffset)
+void scroll_callback(GLFWwindow* _window, double _xoffset, double yoffset)
 {
-    arcball_zoom(&arcball, 1.0f + (yoffset * 0.1));
+    const float speed = 0.5f;
+    cam.radius        = glm_clamp(cam.radius + yoffset * speed, 0.0001f, 100.0f);
+    orbit_update(&cam);
 }
-
-// ...existing code...
 
 void cursor_position_callback(GLFWwindow* window, double xpos, double ypos)
 {
     static double last_xpos = 0, last_ypos = 0;
-    float         dx = (float)(last_xpos - xpos);
-    float         dy = (float)(last_ypos - ypos);
-    last_xpos        = xpos;
-    last_ypos        = ypos;
+
+    float dx  = (float)(last_xpos - xpos);
+    float dy  = (float)(last_ypos - ypos);
+    last_xpos = xpos;
+    last_ypos = ypos;
 
     if (glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_LEFT) != GLFW_PRESS) return;
 
-    // Update yaw/pitch directly
-    arcball.yaw += dx * 0.25f;
-    arcball.pitch += dy * 0.25f;
+    const float speed = 0.01f;
 
-    // Clamp pitch
-    if (arcball.pitch > 85.0f) arcball.pitch = 85.0f;
-    if (arcball.pitch < -85.0f) arcball.pitch = -85.0f;
+    cam.yaw += dx * speed;
+    cam.pitch += dy * speed;
 
-    // Normalize yaw
-    if (arcball.yaw < -180.0f) arcball.yaw += 360.0f;
-    if (arcball.yaw > 180.0f) arcball.yaw -= 360.0f;
-
-    // Rebuild rotation
-    glm_mat4_identity(arcball.rotation);
-    glm_rotate_x(arcball.rotation, glm_rad(arcball.pitch), arcball.rotation);
-    glm_rotate_y(arcball.rotation, glm_rad(arcball.yaw), arcball.rotation);
-
-    arcball_update_view_matrix(&arcball);
+    orbit_update(&cam);
 }
 
-void resize_callback(GLFWwindow* window, int width, int height)
+void resize_callback(GLFWwindow* _window, int width, int height)
 {
+    glViewport(0, 0, width, height);
     text_update(width, height);
+    glm_perspective(glm_rad(45.0f), width / (float)height, 0.1f, 100.0f, view.projection);
 }
 
-// ...existing code...
+void drop_callback(GLFWwindow* _window, int count, const char** paths)
+{
+    log_info("Dropping files not yet supported");
+}
 
 int main(int argc, char const* argv[])
 {
@@ -70,14 +71,17 @@ int main(int argc, char const* argv[])
     glfwSetScrollCallback(window, scroll_callback);
     glfwSetFramebufferSizeCallback(window, resize_callback);
     glfwSetCursorPosCallback(window, cursor_position_callback);
+    glfwSetDropCallback(window, drop_callback);
+    glm_perspective(glm_rad(45.0f), 1280.0f / 720.0f, 0.1f, 100.0f, view.projection);
 
     text_init("c:/code/fmv/app/assets/fonts/Silver.ttf", 1280, 720);
     input_init(window);
+    cam.radius = 5.0f;
+    orbit_init(&cam);
 
     glEnable(GL_DEPTH_TEST);
     glDepthFunc(GL_LESS);
     glDisable(GL_CULL_FACE);
-    arcball_init(&arcball);
 
     model_t model;
 
@@ -86,8 +90,8 @@ int main(int argc, char const* argv[])
 
     model_init(&model);
     parse_obj(&model, fp);
-    unsigned int model_size = model_get_size_mb(&model);
-    gpu_model_t  gpu_model  = model_upload(&model);
+    float       model_size = model_get_size_mb(&model);
+    gpu_model_t gpu_model  = model_upload(&model);
 
     t         = clock() - t;
     double tt = ((double)t) / CLOCKS_PER_SEC;
@@ -97,11 +101,8 @@ int main(int argc, char const* argv[])
     char   fps_chars[16]       = "FPS: N/A";
     double fps_timeout         = 1.0;
     char   info_bar_chars[128] = "verts: n/a    tris: n/a    size: %uMB";
-    sprintf(info_bar_chars, "verts: %u    tris: %u    size: %uMB", gpu_model.vertex_count, gpu_model.indice_count / 3,
+    sprintf(info_bar_chars, "verts: %u    tris: %u    size: %.3fMB", gpu_model.vertex_count, gpu_model.indice_count / 3,
             model_size);
-
-    mat4 proj;
-    glm_perspective(glm_rad(45.0f), 1280.0f / 720.0f, 0.1f, 100.0f, proj);
 
     GLFWcursor* hand_cursor = glfwCreateStandardCursor(GLFW_RESIZE_ALL_CURSOR);
     GLFWcursor* norm_cursor = glfwCreateStandardCursor(GLFW_ARROW_CURSOR);
@@ -145,7 +146,7 @@ int main(int argc, char const* argv[])
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
         if (edges) {
-            model_render(&gpu_model, proj, arcball.view);
+            model_render(&gpu_model, view.projection, cam.view);
         }
 
         if (wireframe || edges) {
@@ -160,13 +161,13 @@ int main(int argc, char const* argv[])
             glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
         }
 
-        model_render(&gpu_model, proj, arcball.view);
+        model_render(&gpu_model, view.projection, cam.view);
 
         if (wireframe || edges) {
             glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
         }
 
-        text_draw(info_bar_chars, 10, wheight - 15, 0.1f, (vec3) { 1.0f, 1.0f, 1.0f });
+        text_draw(info_bar_chars, 10, 15, 0.1f, (vec3) { 1.0f, 1.0f, 1.0f });
 
         glfwSwapBuffers(window);
         input_update(window);

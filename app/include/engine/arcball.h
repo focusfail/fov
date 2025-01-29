@@ -7,13 +7,11 @@ typedef struct {
     vec3  eye;
     vec3  look_at;
     vec3  up;
-    mat4  view;
     float radius;
     float zoom;
-    float pitch;
-    float yaw;
     float distance;
-    mat4  rotation;
+    vec4  rotation;
+    mat4  view;
 } arcball_t;
 
 void arcball_init(arcball_t* ab);

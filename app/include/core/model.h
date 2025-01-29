@@ -36,10 +36,10 @@ typedef struct {
     mat4         model;
 } gpu_model_t;
 
-void         model_init(model_t* model);
-void         model_free(model_t* model);
-unsigned int model_get_size_mb(const model_t* model);
-gpu_model_t  model_upload(model_t* model);
+void        model_init(model_t* model);
+void        model_free(model_t* model);
+float       model_get_size_mb(const model_t* model);
+gpu_model_t model_upload(model_t* model);
 
 void model_render(const gpu_model_t* model, mat4 proj, mat4 view);
 

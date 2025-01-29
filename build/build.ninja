@@ -51,7 +51,7 @@ build cmake_object_order_depends_target_glad: phony || .
 
 build CMakeFiles/glad.dir/third_party/glad/src/glad.c.obj: C_COMPILER__glad_unscanned_Debug C$:/code/fmv/third_party/glad/src/glad.c || cmake_object_order_depends_target_glad
   DEP_FILE = CMakeFiles\glad.dir\third_party\glad\src\glad.c.obj.d
-  FLAGS = -g -std=gnu11
+  FLAGS = -Wall -Wextra -g -std=gnu11
   INCLUDES = -IC:/code/fmv/third_party/glad/include
   OBJECT_DIR = CMakeFiles\glad.dir
   OBJECT_FILE_DIR = CMakeFiles\glad.dir\third_party\glad\src
@@ -65,7 +65,7 @@ build CMakeFiles/glad.dir/third_party/glad/src/glad.c.obj: C_COMPILER__glad_unsc
 # Link the static library libglad.a
 
 build libglad.a: C_STATIC_LIBRARY_LINKER__glad_Debug CMakeFiles/glad.dir/third_party/glad/src/glad.c.obj
-  LANGUAGE_COMPILE_FLAGS = -g
+  LANGUAGE_COMPILE_FLAGS = -Wall -Wextra -g
   OBJECT_DIR = CMakeFiles\glad.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
@@ -84,7 +84,7 @@ build cmake_object_order_depends_target_logc: phony || .
 build CMakeFiles/logc.dir/third_party/log.c/src/log.c.obj: C_COMPILER__logc_unscanned_Debug C$:/code/fmv/third_party/log.c/src/log.c || cmake_object_order_depends_target_logc
   DEFINES = -DLOG_USE_COLOR
   DEP_FILE = CMakeFiles\logc.dir\third_party\log.c\src\log.c.obj.d
-  FLAGS = -g -std=gnu11
+  FLAGS = -Wall -Wextra -g -std=gnu11
   INCLUDES = -IC:/code/fmv/third_party/log.c/src
   OBJECT_DIR = CMakeFiles\logc.dir
   OBJECT_FILE_DIR = CMakeFiles\logc.dir\third_party\log.c\src
@@ -98,7 +98,7 @@ build CMakeFiles/logc.dir/third_party/log.c/src/log.c.obj: C_COMPILER__logc_unsc
 # Link the static library liblogc.a
 
 build liblogc.a: C_STATIC_LIBRARY_LINKER__logc_Debug CMakeFiles/logc.dir/third_party/log.c/src/log.c.obj
-  LANGUAGE_COMPILE_FLAGS = -g
+  LANGUAGE_COMPILE_FLAGS = -Wall -Wextra -g
   OBJECT_DIR = CMakeFiles\logc.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
@@ -117,7 +117,7 @@ build cmake_object_order_depends_target_fmv: phony || cmake_object_order_depends
 build CMakeFiles/fmv.dir/app/source/core/model.c.obj: C_COMPILER__fmv_unscanned_Debug C$:/code/fmv/app/source/core/model.c || cmake_object_order_depends_target_fmv
   DEFINES = -DLOG_USE_COLOR
   DEP_FILE = CMakeFiles\fmv.dir\app\source\core\model.c.obj.d
-  FLAGS = -g -std=gnu11
+  FLAGS = -Wall -Wextra -g -std=gnu11
   INCLUDES = -IC:/code/fmv/app/include -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/stb -IC:/code/fmv/third_party/glad/include -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/log.c/src
   OBJECT_DIR = CMakeFiles\fmv.dir
   OBJECT_FILE_DIR = CMakeFiles\fmv.dir\app\source\core
@@ -125,7 +125,7 @@ build CMakeFiles/fmv.dir/app/source/core/model.c.obj: C_COMPILER__fmv_unscanned_
 build CMakeFiles/fmv.dir/app/source/engine/arcball.c.obj: C_COMPILER__fmv_unscanned_Debug C$:/code/fmv/app/source/engine/arcball.c || cmake_object_order_depends_target_fmv
   DEFINES = -DLOG_USE_COLOR
   DEP_FILE = CMakeFiles\fmv.dir\app\source\engine\arcball.c.obj.d
-  FLAGS = -g -std=gnu11
+  FLAGS = -Wall -Wextra -g -std=gnu11
   INCLUDES = -IC:/code/fmv/app/include -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/stb -IC:/code/fmv/third_party/glad/include -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/log.c/src
   OBJECT_DIR = CMakeFiles\fmv.dir
   OBJECT_FILE_DIR = CMakeFiles\fmv.dir\app\source\engine
@@ -133,7 +133,7 @@ build CMakeFiles/fmv.dir/app/source/engine/arcball.c.obj: C_COMPILER__fmv_unscan
 build CMakeFiles/fmv.dir/app/source/engine/draw.c.obj: C_COMPILER__fmv_unscanned_Debug C$:/code/fmv/app/source/engine/draw.c || cmake_object_order_depends_target_fmv
   DEFINES = -DLOG_USE_COLOR
   DEP_FILE = CMakeFiles\fmv.dir\app\source\engine\draw.c.obj.d
-  FLAGS = -g -std=gnu11
+  FLAGS = -Wall -Wextra -g -std=gnu11
   INCLUDES = -IC:/code/fmv/app/include -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/stb -IC:/code/fmv/third_party/glad/include -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/log.c/src
   OBJECT_DIR = CMakeFiles\fmv.dir
   OBJECT_FILE_DIR = CMakeFiles\fmv.dir\app\source\engine
@@ -141,7 +141,7 @@ build CMakeFiles/fmv.dir/app/source/engine/draw.c.obj: C_COMPILER__fmv_unscanned
 build CMakeFiles/fmv.dir/app/source/engine/file.c.obj: C_COMPILER__fmv_unscanned_Debug C$:/code/fmv/app/source/engine/file.c || cmake_object_order_depends_target_fmv
   DEFINES = -DLOG_USE_COLOR
   DEP_FILE = CMakeFiles\fmv.dir\app\source\engine\file.c.obj.d
-  FLAGS = -g -std=gnu11
+  FLAGS = -Wall -Wextra -g -std=gnu11
   INCLUDES = -IC:/code/fmv/app/include -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/stb -IC:/code/fmv/third_party/glad/include -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/log.c/src
   OBJECT_DIR = CMakeFiles\fmv.dir
   OBJECT_FILE_DIR = CMakeFiles\fmv.dir\app\source\engine
@@ -149,7 +149,15 @@ build CMakeFiles/fmv.dir/app/source/engine/file.c.obj: C_COMPILER__fmv_unscanned
 build CMakeFiles/fmv.dir/app/source/engine/input.c.obj: C_COMPILER__fmv_unscanned_Debug C$:/code/fmv/app/source/engine/input.c || cmake_object_order_depends_target_fmv
   DEFINES = -DLOG_USE_COLOR
   DEP_FILE = CMakeFiles\fmv.dir\app\source\engine\input.c.obj.d
-  FLAGS = -g -std=gnu11
+  FLAGS = -Wall -Wextra -g -std=gnu11
+  INCLUDES = -IC:/code/fmv/app/include -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/stb -IC:/code/fmv/third_party/glad/include -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/log.c/src
+  OBJECT_DIR = CMakeFiles\fmv.dir
+  OBJECT_FILE_DIR = CMakeFiles\fmv.dir\app\source\engine
+
+build CMakeFiles/fmv.dir/app/source/engine/orbit.c.obj: C_COMPILER__fmv_unscanned_Debug C$:/code/fmv/app/source/engine/orbit.c || cmake_object_order_depends_target_fmv
+  DEFINES = -DLOG_USE_COLOR
+  DEP_FILE = CMakeFiles\fmv.dir\app\source\engine\orbit.c.obj.d
+  FLAGS = -Wall -Wextra -g -std=gnu11
   INCLUDES = -IC:/code/fmv/app/include -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/stb -IC:/code/fmv/third_party/glad/include -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/log.c/src
   OBJECT_DIR = CMakeFiles\fmv.dir
   OBJECT_FILE_DIR = CMakeFiles\fmv.dir\app\source\engine
@@ -157,7 +165,7 @@ build CMakeFiles/fmv.dir/app/source/engine/input.c.obj: C_COMPILER__fmv_unscanne
 build CMakeFiles/fmv.dir/app/source/engine/shader.c.obj: C_COMPILER__fmv_unscanned_Debug C$:/code/fmv/app/source/engine/shader.c || cmake_object_order_depends_target_fmv
   DEFINES = -DLOG_USE_COLOR
   DEP_FILE = CMakeFiles\fmv.dir\app\source\engine\shader.c.obj.d
-  FLAGS = -g -std=gnu11
+  FLAGS = -Wall -Wextra -g -std=gnu11
   INCLUDES = -IC:/code/fmv/app/include -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/stb -IC:/code/fmv/third_party/glad/include -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/log.c/src
   OBJECT_DIR = CMakeFiles\fmv.dir
   OBJECT_FILE_DIR = CMakeFiles\fmv.dir\app\source\engine
@@ -165,7 +173,7 @@ build CMakeFiles/fmv.dir/app/source/engine/shader.c.obj: C_COMPILER__fmv_unscann
 build CMakeFiles/fmv.dir/app/source/engine/text.c.obj: C_COMPILER__fmv_unscanned_Debug C$:/code/fmv/app/source/engine/text.c || cmake_object_order_depends_target_fmv
   DEFINES = -DLOG_USE_COLOR
   DEP_FILE = CMakeFiles\fmv.dir\app\source\engine\text.c.obj.d
-  FLAGS = -g -std=gnu11
+  FLAGS = -Wall -Wextra -g -std=gnu11
   INCLUDES = -IC:/code/fmv/app/include -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/stb -IC:/code/fmv/third_party/glad/include -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/log.c/src
   OBJECT_DIR = CMakeFiles\fmv.dir
   OBJECT_FILE_DIR = CMakeFiles\fmv.dir\app\source\engine
@@ -173,7 +181,7 @@ build CMakeFiles/fmv.dir/app/source/engine/text.c.obj: C_COMPILER__fmv_unscanned
 build CMakeFiles/fmv.dir/app/source/main.c.obj: C_COMPILER__fmv_unscanned_Debug C$:/code/fmv/app/source/main.c || cmake_object_order_depends_target_fmv
   DEFINES = -DLOG_USE_COLOR
   DEP_FILE = CMakeFiles\fmv.dir\app\source\main.c.obj.d
-  FLAGS = -g -std=gnu11
+  FLAGS = -Wall -Wextra -g -std=gnu11
   INCLUDES = -IC:/code/fmv/app/include -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/stb -IC:/code/fmv/third_party/glad/include -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/log.c/src
   OBJECT_DIR = CMakeFiles\fmv.dir
   OBJECT_FILE_DIR = CMakeFiles\fmv.dir\app\source
@@ -181,7 +189,7 @@ build CMakeFiles/fmv.dir/app/source/main.c.obj: C_COMPILER__fmv_unscanned_Debug 
 build CMakeFiles/fmv.dir/app/source/parsers/obj.c.obj: C_COMPILER__fmv_unscanned_Debug C$:/code/fmv/app/source/parsers/obj.c || cmake_object_order_depends_target_fmv
   DEFINES = -DLOG_USE_COLOR
   DEP_FILE = CMakeFiles\fmv.dir\app\source\parsers\obj.c.obj.d
-  FLAGS = -g -std=gnu11
+  FLAGS = -Wall -Wextra -g -std=gnu11
   INCLUDES = -IC:/code/fmv/app/include -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/stb -IC:/code/fmv/third_party/glad/include -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/log.c/src
   OBJECT_DIR = CMakeFiles\fmv.dir
   OBJECT_FILE_DIR = CMakeFiles\fmv.dir\app\source\parsers
@@ -194,8 +202,8 @@ build CMakeFiles/fmv.dir/app/source/parsers/obj.c.obj: C_COMPILER__fmv_unscanned
 #############################################
 # Link the executable fmv.exe
 
-build fmv.exe: C_EXECUTABLE_LINKER__fmv_Debug CMakeFiles/fmv.dir/app/source/core/model.c.obj CMakeFiles/fmv.dir/app/source/engine/arcball.c.obj CMakeFiles/fmv.dir/app/source/engine/draw.c.obj CMakeFiles/fmv.dir/app/source/engine/file.c.obj CMakeFiles/fmv.dir/app/source/engine/input.c.obj CMakeFiles/fmv.dir/app/source/engine/shader.c.obj CMakeFiles/fmv.dir/app/source/engine/text.c.obj CMakeFiles/fmv.dir/app/source/main.c.obj CMakeFiles/fmv.dir/app/source/parsers/obj.c.obj | third_party/glfw/src/libglfw3.a libglad.a third_party/cglm/libcglm.dll.a liblogc.a || libglad.a liblogc.a third_party/cglm/libcglm-0.dll third_party/glfw/src/libglfw3.a
-  FLAGS = -g
+build fmv.exe: C_EXECUTABLE_LINKER__fmv_Debug CMakeFiles/fmv.dir/app/source/core/model.c.obj CMakeFiles/fmv.dir/app/source/engine/arcball.c.obj CMakeFiles/fmv.dir/app/source/engine/draw.c.obj CMakeFiles/fmv.dir/app/source/engine/file.c.obj CMakeFiles/fmv.dir/app/source/engine/input.c.obj CMakeFiles/fmv.dir/app/source/engine/orbit.c.obj CMakeFiles/fmv.dir/app/source/engine/shader.c.obj CMakeFiles/fmv.dir/app/source/engine/text.c.obj CMakeFiles/fmv.dir/app/source/main.c.obj CMakeFiles/fmv.dir/app/source/parsers/obj.c.obj | third_party/glfw/src/libglfw3.a libglad.a third_party/cglm/libcglm.dll.a liblogc.a || libglad.a liblogc.a third_party/cglm/libcglm-0.dll third_party/glfw/src/libglfw3.a
+  FLAGS = -Wall -Wextra -g
   LINK_LIBRARIES = third_party/glfw/src/libglfw3.a  libglad.a  third_party/cglm/libcglm.dll.a  liblogc.a  -lUxTheme  -lDwmapi  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\fmv.dir
   POST_BUILD = cd .
@@ -311,7 +319,7 @@ build cmake_object_order_depends_target_cglm: phony || .
 build third_party/cglm/CMakeFiles/cglm.dir/src/euler.c.obj: C_COMPILER__cglm_unscanned_Debug C$:/code/fmv/third_party/cglm/src/euler.c || cmake_object_order_depends_target_cglm
   DEFINES = -DCGLM_EXPORTS -Dcglm_EXPORTS
   DEP_FILE = third_party\cglm\CMakeFiles\cglm.dir\src\euler.c.obj.d
-  FLAGS = -g -std=gnu11 -Wall
+  FLAGS = -Wall -Wextra -g -std=gnu11 -Wall
   INCLUDES = -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src
   OBJECT_DIR = third_party\cglm\CMakeFiles\cglm.dir
   OBJECT_FILE_DIR = third_party\cglm\CMakeFiles\cglm.dir\src
@@ -319,7 +327,7 @@ build third_party/cglm/CMakeFiles/cglm.dir/src/euler.c.obj: C_COMPILER__cglm_uns
 build third_party/cglm/CMakeFiles/cglm.dir/src/affine.c.obj: C_COMPILER__cglm_unscanned_Debug C$:/code/fmv/third_party/cglm/src/affine.c || cmake_object_order_depends_target_cglm
   DEFINES = -DCGLM_EXPORTS -Dcglm_EXPORTS
   DEP_FILE = third_party\cglm\CMakeFiles\cglm.dir\src\affine.c.obj.d
-  FLAGS = -g -std=gnu11 -Wall
+  FLAGS = -Wall -Wextra -g -std=gnu11 -Wall
   INCLUDES = -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src
   OBJECT_DIR = third_party\cglm\CMakeFiles\cglm.dir
   OBJECT_FILE_DIR = third_party\cglm\CMakeFiles\cglm.dir\src
@@ -327,7 +335,7 @@ build third_party/cglm/CMakeFiles/cglm.dir/src/affine.c.obj: C_COMPILER__cglm_un
 build third_party/cglm/CMakeFiles/cglm.dir/src/io.c.obj: C_COMPILER__cglm_unscanned_Debug C$:/code/fmv/third_party/cglm/src/io.c || cmake_object_order_depends_target_cglm
   DEFINES = -DCGLM_EXPORTS -Dcglm_EXPORTS
   DEP_FILE = third_party\cglm\CMakeFiles\cglm.dir\src\io.c.obj.d
-  FLAGS = -g -std=gnu11 -Wall
+  FLAGS = -Wall -Wextra -g -std=gnu11 -Wall
   INCLUDES = -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src
   OBJECT_DIR = third_party\cglm\CMakeFiles\cglm.dir
   OBJECT_FILE_DIR = third_party\cglm\CMakeFiles\cglm.dir\src
@@ -335,7 +343,7 @@ build third_party/cglm/CMakeFiles/cglm.dir/src/io.c.obj: C_COMPILER__cglm_unscan
 build third_party/cglm/CMakeFiles/cglm.dir/src/quat.c.obj: C_COMPILER__cglm_unscanned_Debug C$:/code/fmv/third_party/cglm/src/quat.c || cmake_object_order_depends_target_cglm
   DEFINES = -DCGLM_EXPORTS -Dcglm_EXPORTS
   DEP_FILE = third_party\cglm\CMakeFiles\cglm.dir\src\quat.c.obj.d
-  FLAGS = -g -std=gnu11 -Wall
+  FLAGS = -Wall -Wextra -g -std=gnu11 -Wall
   INCLUDES = -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src
   OBJECT_DIR = third_party\cglm\CMakeFiles\cglm.dir
   OBJECT_FILE_DIR = third_party\cglm\CMakeFiles\cglm.dir\src
@@ -343,7 +351,7 @@ build third_party/cglm/CMakeFiles/cglm.dir/src/quat.c.obj: C_COMPILER__cglm_unsc
 build third_party/cglm/CMakeFiles/cglm.dir/src/cam.c.obj: C_COMPILER__cglm_unscanned_Debug C$:/code/fmv/third_party/cglm/src/cam.c || cmake_object_order_depends_target_cglm
   DEFINES = -DCGLM_EXPORTS -Dcglm_EXPORTS
   DEP_FILE = third_party\cglm\CMakeFiles\cglm.dir\src\cam.c.obj.d
-  FLAGS = -g -std=gnu11 -Wall
+  FLAGS = -Wall -Wextra -g -std=gnu11 -Wall
   INCLUDES = -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src
   OBJECT_DIR = third_party\cglm\CMakeFiles\cglm.dir
   OBJECT_FILE_DIR = third_party\cglm\CMakeFiles\cglm.dir\src
@@ -351,7 +359,7 @@ build third_party/cglm/CMakeFiles/cglm.dir/src/cam.c.obj: C_COMPILER__cglm_unsca
 build third_party/cglm/CMakeFiles/cglm.dir/src/vec2.c.obj: C_COMPILER__cglm_unscanned_Debug C$:/code/fmv/third_party/cglm/src/vec2.c || cmake_object_order_depends_target_cglm
   DEFINES = -DCGLM_EXPORTS -Dcglm_EXPORTS
   DEP_FILE = third_party\cglm\CMakeFiles\cglm.dir\src\vec2.c.obj.d
-  FLAGS = -g -std=gnu11 -Wall
+  FLAGS = -Wall -Wextra -g -std=gnu11 -Wall
   INCLUDES = -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src
   OBJECT_DIR = third_party\cglm\CMakeFiles\cglm.dir
   OBJECT_FILE_DIR = third_party\cglm\CMakeFiles\cglm.dir\src
@@ -359,7 +367,7 @@ build third_party/cglm/CMakeFiles/cglm.dir/src/vec2.c.obj: C_COMPILER__cglm_unsc
 build third_party/cglm/CMakeFiles/cglm.dir/src/ivec2.c.obj: C_COMPILER__cglm_unscanned_Debug C$:/code/fmv/third_party/cglm/src/ivec2.c || cmake_object_order_depends_target_cglm
   DEFINES = -DCGLM_EXPORTS -Dcglm_EXPORTS
   DEP_FILE = third_party\cglm\CMakeFiles\cglm.dir\src\ivec2.c.obj.d
-  FLAGS = -g -std=gnu11 -Wall
+  FLAGS = -Wall -Wextra -g -std=gnu11 -Wall
   INCLUDES = -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src
   OBJECT_DIR = third_party\cglm\CMakeFiles\cglm.dir
   OBJECT_FILE_DIR = third_party\cglm\CMakeFiles\cglm.dir\src
@@ -367,7 +375,7 @@ build third_party/cglm/CMakeFiles/cglm.dir/src/ivec2.c.obj: C_COMPILER__cglm_uns
 build third_party/cglm/CMakeFiles/cglm.dir/src/vec3.c.obj: C_COMPILER__cglm_unscanned_Debug C$:/code/fmv/third_party/cglm/src/vec3.c || cmake_object_order_depends_target_cglm
   DEFINES = -DCGLM_EXPORTS -Dcglm_EXPORTS
   DEP_FILE = third_party\cglm\CMakeFiles\cglm.dir\src\vec3.c.obj.d
-  FLAGS = -g -std=gnu11 -Wall
+  FLAGS = -Wall -Wextra -g -std=gnu11 -Wall
   INCLUDES = -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src
   OBJECT_DIR = third_party\cglm\CMakeFiles\cglm.dir
   OBJECT_FILE_DIR = third_party\cglm\CMakeFiles\cglm.dir\src
@@ -375,7 +383,7 @@ build third_party/cglm/CMakeFiles/cglm.dir/src/vec3.c.obj: C_COMPILER__cglm_unsc
 build third_party/cglm/CMakeFiles/cglm.dir/src/ivec3.c.obj: C_COMPILER__cglm_unscanned_Debug C$:/code/fmv/third_party/cglm/src/ivec3.c || cmake_object_order_depends_target_cglm
   DEFINES = -DCGLM_EXPORTS -Dcglm_EXPORTS
   DEP_FILE = third_party\cglm\CMakeFiles\cglm.dir\src\ivec3.c.obj.d
-  FLAGS = -g -std=gnu11 -Wall
+  FLAGS = -Wall -Wextra -g -std=gnu11 -Wall
   INCLUDES = -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src
   OBJECT_DIR = third_party\cglm\CMakeFiles\cglm.dir
   OBJECT_FILE_DIR = third_party\cglm\CMakeFiles\cglm.dir\src
@@ -383,7 +391,7 @@ build third_party/cglm/CMakeFiles/cglm.dir/src/ivec3.c.obj: C_COMPILER__cglm_uns
 build third_party/cglm/CMakeFiles/cglm.dir/src/vec4.c.obj: C_COMPILER__cglm_unscanned_Debug C$:/code/fmv/third_party/cglm/src/vec4.c || cmake_object_order_depends_target_cglm
   DEFINES = -DCGLM_EXPORTS -Dcglm_EXPORTS
   DEP_FILE = third_party\cglm\CMakeFiles\cglm.dir\src\vec4.c.obj.d
-  FLAGS = -g -std=gnu11 -Wall
+  FLAGS = -Wall -Wextra -g -std=gnu11 -Wall
   INCLUDES = -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src
   OBJECT_DIR = third_party\cglm\CMakeFiles\cglm.dir
   OBJECT_FILE_DIR = third_party\cglm\CMakeFiles\cglm.dir\src
@@ -391,7 +399,7 @@ build third_party/cglm/CMakeFiles/cglm.dir/src/vec4.c.obj: C_COMPILER__cglm_unsc
 build third_party/cglm/CMakeFiles/cglm.dir/src/ivec4.c.obj: C_COMPILER__cglm_unscanned_Debug C$:/code/fmv/third_party/cglm/src/ivec4.c || cmake_object_order_depends_target_cglm
   DEFINES = -DCGLM_EXPORTS -Dcglm_EXPORTS
   DEP_FILE = third_party\cglm\CMakeFiles\cglm.dir\src\ivec4.c.obj.d
-  FLAGS = -g -std=gnu11 -Wall
+  FLAGS = -Wall -Wextra -g -std=gnu11 -Wall
   INCLUDES = -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src
   OBJECT_DIR = third_party\cglm\CMakeFiles\cglm.dir
   OBJECT_FILE_DIR = third_party\cglm\CMakeFiles\cglm.dir\src
@@ -399,7 +407,7 @@ build third_party/cglm/CMakeFiles/cglm.dir/src/ivec4.c.obj: C_COMPILER__cglm_uns
 build third_party/cglm/CMakeFiles/cglm.dir/src/mat2.c.obj: C_COMPILER__cglm_unscanned_Debug C$:/code/fmv/third_party/cglm/src/mat2.c || cmake_object_order_depends_target_cglm
   DEFINES = -DCGLM_EXPORTS -Dcglm_EXPORTS
   DEP_FILE = third_party\cglm\CMakeFiles\cglm.dir\src\mat2.c.obj.d
-  FLAGS = -g -std=gnu11 -Wall
+  FLAGS = -Wall -Wextra -g -std=gnu11 -Wall
   INCLUDES = -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src
   OBJECT_DIR = third_party\cglm\CMakeFiles\cglm.dir
   OBJECT_FILE_DIR = third_party\cglm\CMakeFiles\cglm.dir\src
@@ -407,7 +415,7 @@ build third_party/cglm/CMakeFiles/cglm.dir/src/mat2.c.obj: C_COMPILER__cglm_unsc
 build third_party/cglm/CMakeFiles/cglm.dir/src/mat2x3.c.obj: C_COMPILER__cglm_unscanned_Debug C$:/code/fmv/third_party/cglm/src/mat2x3.c || cmake_object_order_depends_target_cglm
   DEFINES = -DCGLM_EXPORTS -Dcglm_EXPORTS
   DEP_FILE = third_party\cglm\CMakeFiles\cglm.dir\src\mat2x3.c.obj.d
-  FLAGS = -g -std=gnu11 -Wall
+  FLAGS = -Wall -Wextra -g -std=gnu11 -Wall
   INCLUDES = -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src
   OBJECT_DIR = third_party\cglm\CMakeFiles\cglm.dir
   OBJECT_FILE_DIR = third_party\cglm\CMakeFiles\cglm.dir\src
@@ -415,7 +423,7 @@ build third_party/cglm/CMakeFiles/cglm.dir/src/mat2x3.c.obj: C_COMPILER__cglm_un
 build third_party/cglm/CMakeFiles/cglm.dir/src/mat2x4.c.obj: C_COMPILER__cglm_unscanned_Debug C$:/code/fmv/third_party/cglm/src/mat2x4.c || cmake_object_order_depends_target_cglm
   DEFINES = -DCGLM_EXPORTS -Dcglm_EXPORTS
   DEP_FILE = third_party\cglm\CMakeFiles\cglm.dir\src\mat2x4.c.obj.d
-  FLAGS = -g -std=gnu11 -Wall
+  FLAGS = -Wall -Wextra -g -std=gnu11 -Wall
   INCLUDES = -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src
   OBJECT_DIR = third_party\cglm\CMakeFiles\cglm.dir
   OBJECT_FILE_DIR = third_party\cglm\CMakeFiles\cglm.dir\src
@@ -423,7 +431,7 @@ build third_party/cglm/CMakeFiles/cglm.dir/src/mat2x4.c.obj: C_COMPILER__cglm_un
 build third_party/cglm/CMakeFiles/cglm.dir/src/mat3.c.obj: C_COMPILER__cglm_unscanned_Debug C$:/code/fmv/third_party/cglm/src/mat3.c || cmake_object_order_depends_target_cglm
   DEFINES = -DCGLM_EXPORTS -Dcglm_EXPORTS
   DEP_FILE = third_party\cglm\CMakeFiles\cglm.dir\src\mat3.c.obj.d
-  FLAGS = -g -std=gnu11 -Wall
+  FLAGS = -Wall -Wextra -g -std=gnu11 -Wall
   INCLUDES = -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src
   OBJECT_DIR = third_party\cglm\CMakeFiles\cglm.dir
   OBJECT_FILE_DIR = third_party\cglm\CMakeFiles\cglm.dir\src
@@ -431,7 +439,7 @@ build third_party/cglm/CMakeFiles/cglm.dir/src/mat3.c.obj: C_COMPILER__cglm_unsc
 build third_party/cglm/CMakeFiles/cglm.dir/src/mat3x2.c.obj: C_COMPILER__cglm_unscanned_Debug C$:/code/fmv/third_party/cglm/src/mat3x2.c || cmake_object_order_depends_target_cglm
   DEFINES = -DCGLM_EXPORTS -Dcglm_EXPORTS
   DEP_FILE = third_party\cglm\CMakeFiles\cglm.dir\src\mat3x2.c.obj.d
-  FLAGS = -g -std=gnu11 -Wall
+  FLAGS = -Wall -Wextra -g -std=gnu11 -Wall
   INCLUDES = -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src
   OBJECT_DIR = third_party\cglm\CMakeFiles\cglm.dir
   OBJECT_FILE_DIR = third_party\cglm\CMakeFiles\cglm.dir\src
@@ -439,7 +447,7 @@ build third_party/cglm/CMakeFiles/cglm.dir/src/mat3x2.c.obj: C_COMPILER__cglm_un
 build third_party/cglm/CMakeFiles/cglm.dir/src/mat3x4.c.obj: C_COMPILER__cglm_unscanned_Debug C$:/code/fmv/third_party/cglm/src/mat3x4.c || cmake_object_order_depends_target_cglm
   DEFINES = -DCGLM_EXPORTS -Dcglm_EXPORTS
   DEP_FILE = third_party\cglm\CMakeFiles\cglm.dir\src\mat3x4.c.obj.d
-  FLAGS = -g -std=gnu11 -Wall
+  FLAGS = -Wall -Wextra -g -std=gnu11 -Wall
   INCLUDES = -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src
   OBJECT_DIR = third_party\cglm\CMakeFiles\cglm.dir
   OBJECT_FILE_DIR = third_party\cglm\CMakeFiles\cglm.dir\src
@@ -447,7 +455,7 @@ build third_party/cglm/CMakeFiles/cglm.dir/src/mat3x4.c.obj: C_COMPILER__cglm_un
 build third_party/cglm/CMakeFiles/cglm.dir/src/mat4.c.obj: C_COMPILER__cglm_unscanned_Debug C$:/code/fmv/third_party/cglm/src/mat4.c || cmake_object_order_depends_target_cglm
   DEFINES = -DCGLM_EXPORTS -Dcglm_EXPORTS
   DEP_FILE = third_party\cglm\CMakeFiles\cglm.dir\src\mat4.c.obj.d
-  FLAGS = -g -std=gnu11 -Wall
+  FLAGS = -Wall -Wextra -g -std=gnu11 -Wall
   INCLUDES = -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src
   OBJECT_DIR = third_party\cglm\CMakeFiles\cglm.dir
   OBJECT_FILE_DIR = third_party\cglm\CMakeFiles\cglm.dir\src
@@ -455,7 +463,7 @@ build third_party/cglm/CMakeFiles/cglm.dir/src/mat4.c.obj: C_COMPILER__cglm_unsc
 build third_party/cglm/CMakeFiles/cglm.dir/src/mat4x2.c.obj: C_COMPILER__cglm_unscanned_Debug C$:/code/fmv/third_party/cglm/src/mat4x2.c || cmake_object_order_depends_target_cglm
   DEFINES = -DCGLM_EXPORTS -Dcglm_EXPORTS
   DEP_FILE = third_party\cglm\CMakeFiles\cglm.dir\src\mat4x2.c.obj.d
-  FLAGS = -g -std=gnu11 -Wall
+  FLAGS = -Wall -Wextra -g -std=gnu11 -Wall
   INCLUDES = -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src
   OBJECT_DIR = third_party\cglm\CMakeFiles\cglm.dir
   OBJECT_FILE_DIR = third_party\cglm\CMakeFiles\cglm.dir\src
@@ -463,7 +471,7 @@ build third_party/cglm/CMakeFiles/cglm.dir/src/mat4x2.c.obj: C_COMPILER__cglm_un
 build third_party/cglm/CMakeFiles/cglm.dir/src/mat4x3.c.obj: C_COMPILER__cglm_unscanned_Debug C$:/code/fmv/third_party/cglm/src/mat4x3.c || cmake_object_order_depends_target_cglm
   DEFINES = -DCGLM_EXPORTS -Dcglm_EXPORTS
   DEP_FILE = third_party\cglm\CMakeFiles\cglm.dir\src\mat4x3.c.obj.d
-  FLAGS = -g -std=gnu11 -Wall
+  FLAGS = -Wall -Wextra -g -std=gnu11 -Wall
   INCLUDES = -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src
   OBJECT_DIR = third_party\cglm\CMakeFiles\cglm.dir
   OBJECT_FILE_DIR = third_party\cglm\CMakeFiles\cglm.dir\src
@@ -471,7 +479,7 @@ build third_party/cglm/CMakeFiles/cglm.dir/src/mat4x3.c.obj: C_COMPILER__cglm_un
 build third_party/cglm/CMakeFiles/cglm.dir/src/plane.c.obj: C_COMPILER__cglm_unscanned_Debug C$:/code/fmv/third_party/cglm/src/plane.c || cmake_object_order_depends_target_cglm
   DEFINES = -DCGLM_EXPORTS -Dcglm_EXPORTS
   DEP_FILE = third_party\cglm\CMakeFiles\cglm.dir\src\plane.c.obj.d
-  FLAGS = -g -std=gnu11 -Wall
+  FLAGS = -Wall -Wextra -g -std=gnu11 -Wall
   INCLUDES = -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src
   OBJECT_DIR = third_party\cglm\CMakeFiles\cglm.dir
   OBJECT_FILE_DIR = third_party\cglm\CMakeFiles\cglm.dir\src
@@ -479,7 +487,7 @@ build third_party/cglm/CMakeFiles/cglm.dir/src/plane.c.obj: C_COMPILER__cglm_uns
 build third_party/cglm/CMakeFiles/cglm.dir/src/noise.c.obj: C_COMPILER__cglm_unscanned_Debug C$:/code/fmv/third_party/cglm/src/noise.c || cmake_object_order_depends_target_cglm
   DEFINES = -DCGLM_EXPORTS -Dcglm_EXPORTS
   DEP_FILE = third_party\cglm\CMakeFiles\cglm.dir\src\noise.c.obj.d
-  FLAGS = -g -std=gnu11 -Wall
+  FLAGS = -Wall -Wextra -g -std=gnu11 -Wall
   INCLUDES = -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src
   OBJECT_DIR = third_party\cglm\CMakeFiles\cglm.dir
   OBJECT_FILE_DIR = third_party\cglm\CMakeFiles\cglm.dir\src
@@ -487,7 +495,7 @@ build third_party/cglm/CMakeFiles/cglm.dir/src/noise.c.obj: C_COMPILER__cglm_uns
 build third_party/cglm/CMakeFiles/cglm.dir/src/frustum.c.obj: C_COMPILER__cglm_unscanned_Debug C$:/code/fmv/third_party/cglm/src/frustum.c || cmake_object_order_depends_target_cglm
   DEFINES = -DCGLM_EXPORTS -Dcglm_EXPORTS
   DEP_FILE = third_party\cglm\CMakeFiles\cglm.dir\src\frustum.c.obj.d
-  FLAGS = -g -std=gnu11 -Wall
+  FLAGS = -Wall -Wextra -g -std=gnu11 -Wall
   INCLUDES = -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src
   OBJECT_DIR = third_party\cglm\CMakeFiles\cglm.dir
   OBJECT_FILE_DIR = third_party\cglm\CMakeFiles\cglm.dir\src
@@ -495,7 +503,7 @@ build third_party/cglm/CMakeFiles/cglm.dir/src/frustum.c.obj: C_COMPILER__cglm_u
 build third_party/cglm/CMakeFiles/cglm.dir/src/box.c.obj: C_COMPILER__cglm_unscanned_Debug C$:/code/fmv/third_party/cglm/src/box.c || cmake_object_order_depends_target_cglm
   DEFINES = -DCGLM_EXPORTS -Dcglm_EXPORTS
   DEP_FILE = third_party\cglm\CMakeFiles\cglm.dir\src\box.c.obj.d
-  FLAGS = -g -std=gnu11 -Wall
+  FLAGS = -Wall -Wextra -g -std=gnu11 -Wall
   INCLUDES = -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src
   OBJECT_DIR = third_party\cglm\CMakeFiles\cglm.dir
   OBJECT_FILE_DIR = third_party\cglm\CMakeFiles\cglm.dir\src
@@ -503,7 +511,7 @@ build third_party/cglm/CMakeFiles/cglm.dir/src/box.c.obj: C_COMPILER__cglm_unsca
 build third_party/cglm/CMakeFiles/cglm.dir/src/aabb2d.c.obj: C_COMPILER__cglm_unscanned_Debug C$:/code/fmv/third_party/cglm/src/aabb2d.c || cmake_object_order_depends_target_cglm
   DEFINES = -DCGLM_EXPORTS -Dcglm_EXPORTS
   DEP_FILE = third_party\cglm\CMakeFiles\cglm.dir\src\aabb2d.c.obj.d
-  FLAGS = -g -std=gnu11 -Wall
+  FLAGS = -Wall -Wextra -g -std=gnu11 -Wall
   INCLUDES = -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src
   OBJECT_DIR = third_party\cglm\CMakeFiles\cglm.dir
   OBJECT_FILE_DIR = third_party\cglm\CMakeFiles\cglm.dir\src
@@ -511,7 +519,7 @@ build third_party/cglm/CMakeFiles/cglm.dir/src/aabb2d.c.obj: C_COMPILER__cglm_un
 build third_party/cglm/CMakeFiles/cglm.dir/src/project.c.obj: C_COMPILER__cglm_unscanned_Debug C$:/code/fmv/third_party/cglm/src/project.c || cmake_object_order_depends_target_cglm
   DEFINES = -DCGLM_EXPORTS -Dcglm_EXPORTS
   DEP_FILE = third_party\cglm\CMakeFiles\cglm.dir\src\project.c.obj.d
-  FLAGS = -g -std=gnu11 -Wall
+  FLAGS = -Wall -Wextra -g -std=gnu11 -Wall
   INCLUDES = -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src
   OBJECT_DIR = third_party\cglm\CMakeFiles\cglm.dir
   OBJECT_FILE_DIR = third_party\cglm\CMakeFiles\cglm.dir\src
@@ -519,7 +527,7 @@ build third_party/cglm/CMakeFiles/cglm.dir/src/project.c.obj: C_COMPILER__cglm_u
 build third_party/cglm/CMakeFiles/cglm.dir/src/sphere.c.obj: C_COMPILER__cglm_unscanned_Debug C$:/code/fmv/third_party/cglm/src/sphere.c || cmake_object_order_depends_target_cglm
   DEFINES = -DCGLM_EXPORTS -Dcglm_EXPORTS
   DEP_FILE = third_party\cglm\CMakeFiles\cglm.dir\src\sphere.c.obj.d
-  FLAGS = -g -std=gnu11 -Wall
+  FLAGS = -Wall -Wextra -g -std=gnu11 -Wall
   INCLUDES = -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src
   OBJECT_DIR = third_party\cglm\CMakeFiles\cglm.dir
   OBJECT_FILE_DIR = third_party\cglm\CMakeFiles\cglm.dir\src
@@ -527,7 +535,7 @@ build third_party/cglm/CMakeFiles/cglm.dir/src/sphere.c.obj: C_COMPILER__cglm_un
 build third_party/cglm/CMakeFiles/cglm.dir/src/ease.c.obj: C_COMPILER__cglm_unscanned_Debug C$:/code/fmv/third_party/cglm/src/ease.c || cmake_object_order_depends_target_cglm
   DEFINES = -DCGLM_EXPORTS -Dcglm_EXPORTS
   DEP_FILE = third_party\cglm\CMakeFiles\cglm.dir\src\ease.c.obj.d
-  FLAGS = -g -std=gnu11 -Wall
+  FLAGS = -Wall -Wextra -g -std=gnu11 -Wall
   INCLUDES = -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src
   OBJECT_DIR = third_party\cglm\CMakeFiles\cglm.dir
   OBJECT_FILE_DIR = third_party\cglm\CMakeFiles\cglm.dir\src
@@ -535,7 +543,7 @@ build third_party/cglm/CMakeFiles/cglm.dir/src/ease.c.obj: C_COMPILER__cglm_unsc
 build third_party/cglm/CMakeFiles/cglm.dir/src/curve.c.obj: C_COMPILER__cglm_unscanned_Debug C$:/code/fmv/third_party/cglm/src/curve.c || cmake_object_order_depends_target_cglm
   DEFINES = -DCGLM_EXPORTS -Dcglm_EXPORTS
   DEP_FILE = third_party\cglm\CMakeFiles\cglm.dir\src\curve.c.obj.d
-  FLAGS = -g -std=gnu11 -Wall
+  FLAGS = -Wall -Wextra -g -std=gnu11 -Wall
   INCLUDES = -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src
   OBJECT_DIR = third_party\cglm\CMakeFiles\cglm.dir
   OBJECT_FILE_DIR = third_party\cglm\CMakeFiles\cglm.dir\src
@@ -543,7 +551,7 @@ build third_party/cglm/CMakeFiles/cglm.dir/src/curve.c.obj: C_COMPILER__cglm_uns
 build third_party/cglm/CMakeFiles/cglm.dir/src/bezier.c.obj: C_COMPILER__cglm_unscanned_Debug C$:/code/fmv/third_party/cglm/src/bezier.c || cmake_object_order_depends_target_cglm
   DEFINES = -DCGLM_EXPORTS -Dcglm_EXPORTS
   DEP_FILE = third_party\cglm\CMakeFiles\cglm.dir\src\bezier.c.obj.d
-  FLAGS = -g -std=gnu11 -Wall
+  FLAGS = -Wall -Wextra -g -std=gnu11 -Wall
   INCLUDES = -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src
   OBJECT_DIR = third_party\cglm\CMakeFiles\cglm.dir
   OBJECT_FILE_DIR = third_party\cglm\CMakeFiles\cglm.dir\src
@@ -551,7 +559,7 @@ build third_party/cglm/CMakeFiles/cglm.dir/src/bezier.c.obj: C_COMPILER__cglm_un
 build third_party/cglm/CMakeFiles/cglm.dir/src/ray.c.obj: C_COMPILER__cglm_unscanned_Debug C$:/code/fmv/third_party/cglm/src/ray.c || cmake_object_order_depends_target_cglm
   DEFINES = -DCGLM_EXPORTS -Dcglm_EXPORTS
   DEP_FILE = third_party\cglm\CMakeFiles\cglm.dir\src\ray.c.obj.d
-  FLAGS = -g -std=gnu11 -Wall
+  FLAGS = -Wall -Wextra -g -std=gnu11 -Wall
   INCLUDES = -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src
   OBJECT_DIR = third_party\cglm\CMakeFiles\cglm.dir
   OBJECT_FILE_DIR = third_party\cglm\CMakeFiles\cglm.dir\src
@@ -559,7 +567,7 @@ build third_party/cglm/CMakeFiles/cglm.dir/src/ray.c.obj: C_COMPILER__cglm_unsca
 build third_party/cglm/CMakeFiles/cglm.dir/src/affine2d.c.obj: C_COMPILER__cglm_unscanned_Debug C$:/code/fmv/third_party/cglm/src/affine2d.c || cmake_object_order_depends_target_cglm
   DEFINES = -DCGLM_EXPORTS -Dcglm_EXPORTS
   DEP_FILE = third_party\cglm\CMakeFiles\cglm.dir\src\affine2d.c.obj.d
-  FLAGS = -g -std=gnu11 -Wall
+  FLAGS = -Wall -Wextra -g -std=gnu11 -Wall
   INCLUDES = -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src
   OBJECT_DIR = third_party\cglm\CMakeFiles\cglm.dir
   OBJECT_FILE_DIR = third_party\cglm\CMakeFiles\cglm.dir\src
@@ -567,7 +575,7 @@ build third_party/cglm/CMakeFiles/cglm.dir/src/affine2d.c.obj: C_COMPILER__cglm_
 build third_party/cglm/CMakeFiles/cglm.dir/src/clipspace/ortho_lh_no.c.obj: C_COMPILER__cglm_unscanned_Debug C$:/code/fmv/third_party/cglm/src/clipspace/ortho_lh_no.c || cmake_object_order_depends_target_cglm
   DEFINES = -DCGLM_EXPORTS -Dcglm_EXPORTS
   DEP_FILE = third_party\cglm\CMakeFiles\cglm.dir\src\clipspace\ortho_lh_no.c.obj.d
-  FLAGS = -g -std=gnu11 -Wall
+  FLAGS = -Wall -Wextra -g -std=gnu11 -Wall
   INCLUDES = -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src
   OBJECT_DIR = third_party\cglm\CMakeFiles\cglm.dir
   OBJECT_FILE_DIR = third_party\cglm\CMakeFiles\cglm.dir\src\clipspace
@@ -575,7 +583,7 @@ build third_party/cglm/CMakeFiles/cglm.dir/src/clipspace/ortho_lh_no.c.obj: C_CO
 build third_party/cglm/CMakeFiles/cglm.dir/src/clipspace/ortho_lh_zo.c.obj: C_COMPILER__cglm_unscanned_Debug C$:/code/fmv/third_party/cglm/src/clipspace/ortho_lh_zo.c || cmake_object_order_depends_target_cglm
   DEFINES = -DCGLM_EXPORTS -Dcglm_EXPORTS
   DEP_FILE = third_party\cglm\CMakeFiles\cglm.dir\src\clipspace\ortho_lh_zo.c.obj.d
-  FLAGS = -g -std=gnu11 -Wall
+  FLAGS = -Wall -Wextra -g -std=gnu11 -Wall
   INCLUDES = -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src
   OBJECT_DIR = third_party\cglm\CMakeFiles\cglm.dir
   OBJECT_FILE_DIR = third_party\cglm\CMakeFiles\cglm.dir\src\clipspace
@@ -583,7 +591,7 @@ build third_party/cglm/CMakeFiles/cglm.dir/src/clipspace/ortho_lh_zo.c.obj: C_CO
 build third_party/cglm/CMakeFiles/cglm.dir/src/clipspace/ortho_rh_no.c.obj: C_COMPILER__cglm_unscanned_Debug C$:/code/fmv/third_party/cglm/src/clipspace/ortho_rh_no.c || cmake_object_order_depends_target_cglm
   DEFINES = -DCGLM_EXPORTS -Dcglm_EXPORTS
   DEP_FILE = third_party\cglm\CMakeFiles\cglm.dir\src\clipspace\ortho_rh_no.c.obj.d
-  FLAGS = -g -std=gnu11 -Wall
+  FLAGS = -Wall -Wextra -g -std=gnu11 -Wall
   INCLUDES = -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src
   OBJECT_DIR = third_party\cglm\CMakeFiles\cglm.dir
   OBJECT_FILE_DIR = third_party\cglm\CMakeFiles\cglm.dir\src\clipspace
@@ -591,7 +599,7 @@ build third_party/cglm/CMakeFiles/cglm.dir/src/clipspace/ortho_rh_no.c.obj: C_CO
 build third_party/cglm/CMakeFiles/cglm.dir/src/clipspace/ortho_rh_zo.c.obj: C_COMPILER__cglm_unscanned_Debug C$:/code/fmv/third_party/cglm/src/clipspace/ortho_rh_zo.c || cmake_object_order_depends_target_cglm
   DEFINES = -DCGLM_EXPORTS -Dcglm_EXPORTS
   DEP_FILE = third_party\cglm\CMakeFiles\cglm.dir\src\clipspace\ortho_rh_zo.c.obj.d
-  FLAGS = -g -std=gnu11 -Wall
+  FLAGS = -Wall -Wextra -g -std=gnu11 -Wall
   INCLUDES = -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src
   OBJECT_DIR = third_party\cglm\CMakeFiles\cglm.dir
   OBJECT_FILE_DIR = third_party\cglm\CMakeFiles\cglm.dir\src\clipspace
@@ -599,7 +607,7 @@ build third_party/cglm/CMakeFiles/cglm.dir/src/clipspace/ortho_rh_zo.c.obj: C_CO
 build third_party/cglm/CMakeFiles/cglm.dir/src/clipspace/persp_lh_no.c.obj: C_COMPILER__cglm_unscanned_Debug C$:/code/fmv/third_party/cglm/src/clipspace/persp_lh_no.c || cmake_object_order_depends_target_cglm
   DEFINES = -DCGLM_EXPORTS -Dcglm_EXPORTS
   DEP_FILE = third_party\cglm\CMakeFiles\cglm.dir\src\clipspace\persp_lh_no.c.obj.d
-  FLAGS = -g -std=gnu11 -Wall
+  FLAGS = -Wall -Wextra -g -std=gnu11 -Wall
   INCLUDES = -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src
   OBJECT_DIR = third_party\cglm\CMakeFiles\cglm.dir
   OBJECT_FILE_DIR = third_party\cglm\CMakeFiles\cglm.dir\src\clipspace
@@ -607,7 +615,7 @@ build third_party/cglm/CMakeFiles/cglm.dir/src/clipspace/persp_lh_no.c.obj: C_CO
 build third_party/cglm/CMakeFiles/cglm.dir/src/clipspace/persp_lh_zo.c.obj: C_COMPILER__cglm_unscanned_Debug C$:/code/fmv/third_party/cglm/src/clipspace/persp_lh_zo.c || cmake_object_order_depends_target_cglm
   DEFINES = -DCGLM_EXPORTS -Dcglm_EXPORTS
   DEP_FILE = third_party\cglm\CMakeFiles\cglm.dir\src\clipspace\persp_lh_zo.c.obj.d
-  FLAGS = -g -std=gnu11 -Wall
+  FLAGS = -Wall -Wextra -g -std=gnu11 -Wall
   INCLUDES = -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src
   OBJECT_DIR = third_party\cglm\CMakeFiles\cglm.dir
   OBJECT_FILE_DIR = third_party\cglm\CMakeFiles\cglm.dir\src\clipspace
@@ -615,7 +623,7 @@ build third_party/cglm/CMakeFiles/cglm.dir/src/clipspace/persp_lh_zo.c.obj: C_CO
 build third_party/cglm/CMakeFiles/cglm.dir/src/clipspace/persp_rh_no.c.obj: C_COMPILER__cglm_unscanned_Debug C$:/code/fmv/third_party/cglm/src/clipspace/persp_rh_no.c || cmake_object_order_depends_target_cglm
   DEFINES = -DCGLM_EXPORTS -Dcglm_EXPORTS
   DEP_FILE = third_party\cglm\CMakeFiles\cglm.dir\src\clipspace\persp_rh_no.c.obj.d
-  FLAGS = -g -std=gnu11 -Wall
+  FLAGS = -Wall -Wextra -g -std=gnu11 -Wall
   INCLUDES = -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src
   OBJECT_DIR = third_party\cglm\CMakeFiles\cglm.dir
   OBJECT_FILE_DIR = third_party\cglm\CMakeFiles\cglm.dir\src\clipspace
@@ -623,7 +631,7 @@ build third_party/cglm/CMakeFiles/cglm.dir/src/clipspace/persp_rh_no.c.obj: C_CO
 build third_party/cglm/CMakeFiles/cglm.dir/src/clipspace/persp_rh_zo.c.obj: C_COMPILER__cglm_unscanned_Debug C$:/code/fmv/third_party/cglm/src/clipspace/persp_rh_zo.c || cmake_object_order_depends_target_cglm
   DEFINES = -DCGLM_EXPORTS -Dcglm_EXPORTS
   DEP_FILE = third_party\cglm\CMakeFiles\cglm.dir\src\clipspace\persp_rh_zo.c.obj.d
-  FLAGS = -g -std=gnu11 -Wall
+  FLAGS = -Wall -Wextra -g -std=gnu11 -Wall
   INCLUDES = -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src
   OBJECT_DIR = third_party\cglm\CMakeFiles\cglm.dir
   OBJECT_FILE_DIR = third_party\cglm\CMakeFiles\cglm.dir\src\clipspace
@@ -631,7 +639,7 @@ build third_party/cglm/CMakeFiles/cglm.dir/src/clipspace/persp_rh_zo.c.obj: C_CO
 build third_party/cglm/CMakeFiles/cglm.dir/src/clipspace/view_lh_no.c.obj: C_COMPILER__cglm_unscanned_Debug C$:/code/fmv/third_party/cglm/src/clipspace/view_lh_no.c || cmake_object_order_depends_target_cglm
   DEFINES = -DCGLM_EXPORTS -Dcglm_EXPORTS
   DEP_FILE = third_party\cglm\CMakeFiles\cglm.dir\src\clipspace\view_lh_no.c.obj.d
-  FLAGS = -g -std=gnu11 -Wall
+  FLAGS = -Wall -Wextra -g -std=gnu11 -Wall
   INCLUDES = -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src
   OBJECT_DIR = third_party\cglm\CMakeFiles\cglm.dir
   OBJECT_FILE_DIR = third_party\cglm\CMakeFiles\cglm.dir\src\clipspace
@@ -639,7 +647,7 @@ build third_party/cglm/CMakeFiles/cglm.dir/src/clipspace/view_lh_no.c.obj: C_COM
 build third_party/cglm/CMakeFiles/cglm.dir/src/clipspace/view_lh_zo.c.obj: C_COMPILER__cglm_unscanned_Debug C$:/code/fmv/third_party/cglm/src/clipspace/view_lh_zo.c || cmake_object_order_depends_target_cglm
   DEFINES = -DCGLM_EXPORTS -Dcglm_EXPORTS
   DEP_FILE = third_party\cglm\CMakeFiles\cglm.dir\src\clipspace\view_lh_zo.c.obj.d
-  FLAGS = -g -std=gnu11 -Wall
+  FLAGS = -Wall -Wextra -g -std=gnu11 -Wall
   INCLUDES = -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src
   OBJECT_DIR = third_party\cglm\CMakeFiles\cglm.dir
   OBJECT_FILE_DIR = third_party\cglm\CMakeFiles\cglm.dir\src\clipspace
@@ -647,7 +655,7 @@ build third_party/cglm/CMakeFiles/cglm.dir/src/clipspace/view_lh_zo.c.obj: C_COM
 build third_party/cglm/CMakeFiles/cglm.dir/src/clipspace/view_rh_no.c.obj: C_COMPILER__cglm_unscanned_Debug C$:/code/fmv/third_party/cglm/src/clipspace/view_rh_no.c || cmake_object_order_depends_target_cglm
   DEFINES = -DCGLM_EXPORTS -Dcglm_EXPORTS
   DEP_FILE = third_party\cglm\CMakeFiles\cglm.dir\src\clipspace\view_rh_no.c.obj.d
-  FLAGS = -g -std=gnu11 -Wall
+  FLAGS = -Wall -Wextra -g -std=gnu11 -Wall
   INCLUDES = -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src
   OBJECT_DIR = third_party\cglm\CMakeFiles\cglm.dir
   OBJECT_FILE_DIR = third_party\cglm\CMakeFiles\cglm.dir\src\clipspace
@@ -655,7 +663,7 @@ build third_party/cglm/CMakeFiles/cglm.dir/src/clipspace/view_rh_no.c.obj: C_COM
 build third_party/cglm/CMakeFiles/cglm.dir/src/clipspace/view_rh_zo.c.obj: C_COMPILER__cglm_unscanned_Debug C$:/code/fmv/third_party/cglm/src/clipspace/view_rh_zo.c || cmake_object_order_depends_target_cglm
   DEFINES = -DCGLM_EXPORTS -Dcglm_EXPORTS
   DEP_FILE = third_party\cglm\CMakeFiles\cglm.dir\src\clipspace\view_rh_zo.c.obj.d
-  FLAGS = -g -std=gnu11 -Wall
+  FLAGS = -Wall -Wextra -g -std=gnu11 -Wall
   INCLUDES = -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src
   OBJECT_DIR = third_party\cglm\CMakeFiles\cglm.dir
   OBJECT_FILE_DIR = third_party\cglm\CMakeFiles\cglm.dir\src\clipspace
@@ -663,7 +671,7 @@ build third_party/cglm/CMakeFiles/cglm.dir/src/clipspace/view_rh_zo.c.obj: C_COM
 build third_party/cglm/CMakeFiles/cglm.dir/src/clipspace/project_no.c.obj: C_COMPILER__cglm_unscanned_Debug C$:/code/fmv/third_party/cglm/src/clipspace/project_no.c || cmake_object_order_depends_target_cglm
   DEFINES = -DCGLM_EXPORTS -Dcglm_EXPORTS
   DEP_FILE = third_party\cglm\CMakeFiles\cglm.dir\src\clipspace\project_no.c.obj.d
-  FLAGS = -g -std=gnu11 -Wall
+  FLAGS = -Wall -Wextra -g -std=gnu11 -Wall
   INCLUDES = -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src
   OBJECT_DIR = third_party\cglm\CMakeFiles\cglm.dir
   OBJECT_FILE_DIR = third_party\cglm\CMakeFiles\cglm.dir\src\clipspace
@@ -671,7 +679,7 @@ build third_party/cglm/CMakeFiles/cglm.dir/src/clipspace/project_no.c.obj: C_COM
 build third_party/cglm/CMakeFiles/cglm.dir/src/clipspace/project_zo.c.obj: C_COMPILER__cglm_unscanned_Debug C$:/code/fmv/third_party/cglm/src/clipspace/project_zo.c || cmake_object_order_depends_target_cglm
   DEFINES = -DCGLM_EXPORTS -Dcglm_EXPORTS
   DEP_FILE = third_party\cglm\CMakeFiles\cglm.dir\src\clipspace\project_zo.c.obj.d
-  FLAGS = -g -std=gnu11 -Wall
+  FLAGS = -Wall -Wextra -g -std=gnu11 -Wall
   INCLUDES = -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/cglm/src
   OBJECT_DIR = third_party\cglm\CMakeFiles\cglm.dir
   OBJECT_FILE_DIR = third_party\cglm\CMakeFiles\cglm.dir\src\clipspace
@@ -685,7 +693,7 @@ build third_party/cglm/CMakeFiles/cglm.dir/src/clipspace/project_zo.c.obj: C_COM
 # Link the shared library third_party\cglm\libcglm-0.dll
 
 build third_party/cglm/libcglm-0.dll third_party/cglm/libcglm.dll.a: C_SHARED_LIBRARY_LINKER__cglm_Debug third_party/cglm/CMakeFiles/cglm.dir/src/euler.c.obj third_party/cglm/CMakeFiles/cglm.dir/src/affine.c.obj third_party/cglm/CMakeFiles/cglm.dir/src/io.c.obj third_party/cglm/CMakeFiles/cglm.dir/src/quat.c.obj third_party/cglm/CMakeFiles/cglm.dir/src/cam.c.obj third_party/cglm/CMakeFiles/cglm.dir/src/vec2.c.obj third_party/cglm/CMakeFiles/cglm.dir/src/ivec2.c.obj third_party/cglm/CMakeFiles/cglm.dir/src/vec3.c.obj third_party/cglm/CMakeFiles/cglm.dir/src/ivec3.c.obj third_party/cglm/CMakeFiles/cglm.dir/src/vec4.c.obj third_party/cglm/CMakeFiles/cglm.dir/src/ivec4.c.obj third_party/cglm/CMakeFiles/cglm.dir/src/mat2.c.obj third_party/cglm/CMakeFiles/cglm.dir/src/mat2x3.c.obj third_party/cglm/CMakeFiles/cglm.dir/src/mat2x4.c.obj third_party/cglm/CMakeFiles/cglm.dir/src/mat3.c.obj third_party/cglm/CMakeFiles/cglm.dir/src/mat3x2.c.obj third_party/cglm/CMakeFiles/cglm.dir/src/mat3x4.c.obj third_party/cglm/CMakeFiles/cglm.dir/src/mat4.c.obj third_party/cglm/CMakeFiles/cglm.dir/src/mat4x2.c.obj third_party/cglm/CMakeFiles/cglm.dir/src/mat4x3.c.obj third_party/cglm/CMakeFiles/cglm.dir/src/plane.c.obj third_party/cglm/CMakeFiles/cglm.dir/src/noise.c.obj third_party/cglm/CMakeFiles/cglm.dir/src/frustum.c.obj third_party/cglm/CMakeFiles/cglm.dir/src/box.c.obj third_party/cglm/CMakeFiles/cglm.dir/src/aabb2d.c.obj third_party/cglm/CMakeFiles/cglm.dir/src/project.c.obj third_party/cglm/CMakeFiles/cglm.dir/src/sphere.c.obj third_party/cglm/CMakeFiles/cglm.dir/src/ease.c.obj third_party/cglm/CMakeFiles/cglm.dir/src/curve.c.obj third_party/cglm/CMakeFiles/cglm.dir/src/bezier.c.obj third_party/cglm/CMakeFiles/cglm.dir/src/ray.c.obj third_party/cglm/CMakeFiles/cglm.dir/src/affine2d.c.obj third_party/cglm/CMakeFiles/cglm.dir/src/clipspace/ortho_lh_no.c.obj third_party/cglm/CMakeFiles/cglm.dir/src/clipspace/ortho_lh_zo.c.obj third_party/cglm/CMakeFiles/cglm.dir/src/clipspace/ortho_rh_no.c.obj third_party/cglm/CMakeFiles/cglm.dir/src/clipspace/ortho_rh_zo.c.obj third_party/cglm/CMakeFiles/cglm.dir/src/clipspace/persp_lh_no.c.obj third_party/cglm/CMakeFiles/cglm.dir/src/clipspace/persp_lh_zo.c.obj third_party/cglm/CMakeFiles/cglm.dir/src/clipspace/persp_rh_no.c.obj third_party/cglm/CMakeFiles/cglm.dir/src/clipspace/persp_rh_zo.c.obj third_party/cglm/CMakeFiles/cglm.dir/src/clipspace/view_lh_no.c.obj third_party/cglm/CMakeFiles/cglm.dir/src/clipspace/view_lh_zo.c.obj third_party/cglm/CMakeFiles/cglm.dir/src/clipspace/view_rh_no.c.obj third_party/cglm/CMakeFiles/cglm.dir/src/clipspace/view_rh_zo.c.obj third_party/cglm/CMakeFiles/cglm.dir/src/clipspace/project_no.c.obj third_party/cglm/CMakeFiles/cglm.dir/src/clipspace/project_zo.c.obj
-  LANGUAGE_COMPILE_FLAGS = -g
+  LANGUAGE_COMPILE_FLAGS = -Wall -Wextra -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = third_party\cglm\CMakeFiles\cglm.dir
   POST_BUILD = cd .
@@ -910,7 +918,7 @@ build cmake_object_order_depends_target_glfw: phony || .
 build third_party/glfw/src/CMakeFiles/glfw.dir/context.c.obj: C_COMPILER__glfw_unscanned_Debug C$:/code/fmv/third_party/glfw/src/context.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
   DEP_FILE = third_party\glfw\src\CMakeFiles\glfw.dir\context.c.obj.d
-  FLAGS = -g -std=c99 -Wall
+  FLAGS = -Wall -Wextra -g -std=c99 -Wall
   INCLUDES = -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/glfw/src -IC:/code/fmv/build/third_party/glfw/src
   OBJECT_DIR = third_party\glfw\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = third_party\glfw\src\CMakeFiles\glfw.dir
@@ -918,7 +926,7 @@ build third_party/glfw/src/CMakeFiles/glfw.dir/context.c.obj: C_COMPILER__glfw_u
 build third_party/glfw/src/CMakeFiles/glfw.dir/init.c.obj: C_COMPILER__glfw_unscanned_Debug C$:/code/fmv/third_party/glfw/src/init.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
   DEP_FILE = third_party\glfw\src\CMakeFiles\glfw.dir\init.c.obj.d
-  FLAGS = -g -std=c99 -Wall
+  FLAGS = -Wall -Wextra -g -std=c99 -Wall
   INCLUDES = -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/glfw/src -IC:/code/fmv/build/third_party/glfw/src
   OBJECT_DIR = third_party\glfw\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = third_party\glfw\src\CMakeFiles\glfw.dir
@@ -926,7 +934,7 @@ build third_party/glfw/src/CMakeFiles/glfw.dir/init.c.obj: C_COMPILER__glfw_unsc
 build third_party/glfw/src/CMakeFiles/glfw.dir/input.c.obj: C_COMPILER__glfw_unscanned_Debug C$:/code/fmv/third_party/glfw/src/input.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
   DEP_FILE = third_party\glfw\src\CMakeFiles\glfw.dir\input.c.obj.d
-  FLAGS = -g -std=c99 -Wall
+  FLAGS = -Wall -Wextra -g -std=c99 -Wall
   INCLUDES = -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/glfw/src -IC:/code/fmv/build/third_party/glfw/src
   OBJECT_DIR = third_party\glfw\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = third_party\glfw\src\CMakeFiles\glfw.dir
@@ -934,7 +942,7 @@ build third_party/glfw/src/CMakeFiles/glfw.dir/input.c.obj: C_COMPILER__glfw_uns
 build third_party/glfw/src/CMakeFiles/glfw.dir/monitor.c.obj: C_COMPILER__glfw_unscanned_Debug C$:/code/fmv/third_party/glfw/src/monitor.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
   DEP_FILE = third_party\glfw\src\CMakeFiles\glfw.dir\monitor.c.obj.d
-  FLAGS = -g -std=c99 -Wall
+  FLAGS = -Wall -Wextra -g -std=c99 -Wall
   INCLUDES = -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/glfw/src -IC:/code/fmv/build/third_party/glfw/src
   OBJECT_DIR = third_party\glfw\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = third_party\glfw\src\CMakeFiles\glfw.dir
@@ -942,7 +950,7 @@ build third_party/glfw/src/CMakeFiles/glfw.dir/monitor.c.obj: C_COMPILER__glfw_u
 build third_party/glfw/src/CMakeFiles/glfw.dir/platform.c.obj: C_COMPILER__glfw_unscanned_Debug C$:/code/fmv/third_party/glfw/src/platform.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
   DEP_FILE = third_party\glfw\src\CMakeFiles\glfw.dir\platform.c.obj.d
-  FLAGS = -g -std=c99 -Wall
+  FLAGS = -Wall -Wextra -g -std=c99 -Wall
   INCLUDES = -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/glfw/src -IC:/code/fmv/build/third_party/glfw/src
   OBJECT_DIR = third_party\glfw\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = third_party\glfw\src\CMakeFiles\glfw.dir
@@ -950,7 +958,7 @@ build third_party/glfw/src/CMakeFiles/glfw.dir/platform.c.obj: C_COMPILER__glfw_
 build third_party/glfw/src/CMakeFiles/glfw.dir/vulkan.c.obj: C_COMPILER__glfw_unscanned_Debug C$:/code/fmv/third_party/glfw/src/vulkan.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
   DEP_FILE = third_party\glfw\src\CMakeFiles\glfw.dir\vulkan.c.obj.d
-  FLAGS = -g -std=c99 -Wall
+  FLAGS = -Wall -Wextra -g -std=c99 -Wall
   INCLUDES = -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/glfw/src -IC:/code/fmv/build/third_party/glfw/src
   OBJECT_DIR = third_party\glfw\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = third_party\glfw\src\CMakeFiles\glfw.dir
@@ -958,7 +966,7 @@ build third_party/glfw/src/CMakeFiles/glfw.dir/vulkan.c.obj: C_COMPILER__glfw_un
 build third_party/glfw/src/CMakeFiles/glfw.dir/window.c.obj: C_COMPILER__glfw_unscanned_Debug C$:/code/fmv/third_party/glfw/src/window.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
   DEP_FILE = third_party\glfw\src\CMakeFiles\glfw.dir\window.c.obj.d
-  FLAGS = -g -std=c99 -Wall
+  FLAGS = -Wall -Wextra -g -std=c99 -Wall
   INCLUDES = -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/glfw/src -IC:/code/fmv/build/third_party/glfw/src
   OBJECT_DIR = third_party\glfw\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = third_party\glfw\src\CMakeFiles\glfw.dir
@@ -966,7 +974,7 @@ build third_party/glfw/src/CMakeFiles/glfw.dir/window.c.obj: C_COMPILER__glfw_un
 build third_party/glfw/src/CMakeFiles/glfw.dir/egl_context.c.obj: C_COMPILER__glfw_unscanned_Debug C$:/code/fmv/third_party/glfw/src/egl_context.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
   DEP_FILE = third_party\glfw\src\CMakeFiles\glfw.dir\egl_context.c.obj.d
-  FLAGS = -g -std=c99 -Wall
+  FLAGS = -Wall -Wextra -g -std=c99 -Wall
   INCLUDES = -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/glfw/src -IC:/code/fmv/build/third_party/glfw/src
   OBJECT_DIR = third_party\glfw\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = third_party\glfw\src\CMakeFiles\glfw.dir
@@ -974,7 +982,7 @@ build third_party/glfw/src/CMakeFiles/glfw.dir/egl_context.c.obj: C_COMPILER__gl
 build third_party/glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.obj: C_COMPILER__glfw_unscanned_Debug C$:/code/fmv/third_party/glfw/src/osmesa_context.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
   DEP_FILE = third_party\glfw\src\CMakeFiles\glfw.dir\osmesa_context.c.obj.d
-  FLAGS = -g -std=c99 -Wall
+  FLAGS = -Wall -Wextra -g -std=c99 -Wall
   INCLUDES = -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/glfw/src -IC:/code/fmv/build/third_party/glfw/src
   OBJECT_DIR = third_party\glfw\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = third_party\glfw\src\CMakeFiles\glfw.dir
@@ -982,7 +990,7 @@ build third_party/glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.obj: C_COMPILER_
 build third_party/glfw/src/CMakeFiles/glfw.dir/null_init.c.obj: C_COMPILER__glfw_unscanned_Debug C$:/code/fmv/third_party/glfw/src/null_init.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
   DEP_FILE = third_party\glfw\src\CMakeFiles\glfw.dir\null_init.c.obj.d
-  FLAGS = -g -std=c99 -Wall
+  FLAGS = -Wall -Wextra -g -std=c99 -Wall
   INCLUDES = -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/glfw/src -IC:/code/fmv/build/third_party/glfw/src
   OBJECT_DIR = third_party\glfw\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = third_party\glfw\src\CMakeFiles\glfw.dir
@@ -990,7 +998,7 @@ build third_party/glfw/src/CMakeFiles/glfw.dir/null_init.c.obj: C_COMPILER__glfw
 build third_party/glfw/src/CMakeFiles/glfw.dir/null_monitor.c.obj: C_COMPILER__glfw_unscanned_Debug C$:/code/fmv/third_party/glfw/src/null_monitor.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
   DEP_FILE = third_party\glfw\src\CMakeFiles\glfw.dir\null_monitor.c.obj.d
-  FLAGS = -g -std=c99 -Wall
+  FLAGS = -Wall -Wextra -g -std=c99 -Wall
   INCLUDES = -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/glfw/src -IC:/code/fmv/build/third_party/glfw/src
   OBJECT_DIR = third_party\glfw\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = third_party\glfw\src\CMakeFiles\glfw.dir
@@ -998,7 +1006,7 @@ build third_party/glfw/src/CMakeFiles/glfw.dir/null_monitor.c.obj: C_COMPILER__g
 build third_party/glfw/src/CMakeFiles/glfw.dir/null_window.c.obj: C_COMPILER__glfw_unscanned_Debug C$:/code/fmv/third_party/glfw/src/null_window.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
   DEP_FILE = third_party\glfw\src\CMakeFiles\glfw.dir\null_window.c.obj.d
-  FLAGS = -g -std=c99 -Wall
+  FLAGS = -Wall -Wextra -g -std=c99 -Wall
   INCLUDES = -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/glfw/src -IC:/code/fmv/build/third_party/glfw/src
   OBJECT_DIR = third_party\glfw\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = third_party\glfw\src\CMakeFiles\glfw.dir
@@ -1006,7 +1014,7 @@ build third_party/glfw/src/CMakeFiles/glfw.dir/null_window.c.obj: C_COMPILER__gl
 build third_party/glfw/src/CMakeFiles/glfw.dir/null_joystick.c.obj: C_COMPILER__glfw_unscanned_Debug C$:/code/fmv/third_party/glfw/src/null_joystick.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
   DEP_FILE = third_party\glfw\src\CMakeFiles\glfw.dir\null_joystick.c.obj.d
-  FLAGS = -g -std=c99 -Wall
+  FLAGS = -Wall -Wextra -g -std=c99 -Wall
   INCLUDES = -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/glfw/src -IC:/code/fmv/build/third_party/glfw/src
   OBJECT_DIR = third_party\glfw\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = third_party\glfw\src\CMakeFiles\glfw.dir
@@ -1014,7 +1022,7 @@ build third_party/glfw/src/CMakeFiles/glfw.dir/null_joystick.c.obj: C_COMPILER__
 build third_party/glfw/src/CMakeFiles/glfw.dir/win32_module.c.obj: C_COMPILER__glfw_unscanned_Debug C$:/code/fmv/third_party/glfw/src/win32_module.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
   DEP_FILE = third_party\glfw\src\CMakeFiles\glfw.dir\win32_module.c.obj.d
-  FLAGS = -g -std=c99 -Wall
+  FLAGS = -Wall -Wextra -g -std=c99 -Wall
   INCLUDES = -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/glfw/src -IC:/code/fmv/build/third_party/glfw/src
   OBJECT_DIR = third_party\glfw\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = third_party\glfw\src\CMakeFiles\glfw.dir
@@ -1022,7 +1030,7 @@ build third_party/glfw/src/CMakeFiles/glfw.dir/win32_module.c.obj: C_COMPILER__g
 build third_party/glfw/src/CMakeFiles/glfw.dir/win32_time.c.obj: C_COMPILER__glfw_unscanned_Debug C$:/code/fmv/third_party/glfw/src/win32_time.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
   DEP_FILE = third_party\glfw\src\CMakeFiles\glfw.dir\win32_time.c.obj.d
-  FLAGS = -g -std=c99 -Wall
+  FLAGS = -Wall -Wextra -g -std=c99 -Wall
   INCLUDES = -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/glfw/src -IC:/code/fmv/build/third_party/glfw/src
   OBJECT_DIR = third_party\glfw\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = third_party\glfw\src\CMakeFiles\glfw.dir
@@ -1030,7 +1038,7 @@ build third_party/glfw/src/CMakeFiles/glfw.dir/win32_time.c.obj: C_COMPILER__glf
 build third_party/glfw/src/CMakeFiles/glfw.dir/win32_thread.c.obj: C_COMPILER__glfw_unscanned_Debug C$:/code/fmv/third_party/glfw/src/win32_thread.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
   DEP_FILE = third_party\glfw\src\CMakeFiles\glfw.dir\win32_thread.c.obj.d
-  FLAGS = -g -std=c99 -Wall
+  FLAGS = -Wall -Wextra -g -std=c99 -Wall
   INCLUDES = -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/glfw/src -IC:/code/fmv/build/third_party/glfw/src
   OBJECT_DIR = third_party\glfw\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = third_party\glfw\src\CMakeFiles\glfw.dir
@@ -1038,7 +1046,7 @@ build third_party/glfw/src/CMakeFiles/glfw.dir/win32_thread.c.obj: C_COMPILER__g
 build third_party/glfw/src/CMakeFiles/glfw.dir/win32_init.c.obj: C_COMPILER__glfw_unscanned_Debug C$:/code/fmv/third_party/glfw/src/win32_init.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
   DEP_FILE = third_party\glfw\src\CMakeFiles\glfw.dir\win32_init.c.obj.d
-  FLAGS = -g -std=c99 -Wall
+  FLAGS = -Wall -Wextra -g -std=c99 -Wall
   INCLUDES = -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/glfw/src -IC:/code/fmv/build/third_party/glfw/src
   OBJECT_DIR = third_party\glfw\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = third_party\glfw\src\CMakeFiles\glfw.dir
@@ -1046,7 +1054,7 @@ build third_party/glfw/src/CMakeFiles/glfw.dir/win32_init.c.obj: C_COMPILER__glf
 build third_party/glfw/src/CMakeFiles/glfw.dir/win32_joystick.c.obj: C_COMPILER__glfw_unscanned_Debug C$:/code/fmv/third_party/glfw/src/win32_joystick.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
   DEP_FILE = third_party\glfw\src\CMakeFiles\glfw.dir\win32_joystick.c.obj.d
-  FLAGS = -g -std=c99 -Wall
+  FLAGS = -Wall -Wextra -g -std=c99 -Wall
   INCLUDES = -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/glfw/src -IC:/code/fmv/build/third_party/glfw/src
   OBJECT_DIR = third_party\glfw\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = third_party\glfw\src\CMakeFiles\glfw.dir
@@ -1054,7 +1062,7 @@ build third_party/glfw/src/CMakeFiles/glfw.dir/win32_joystick.c.obj: C_COMPILER_
 build third_party/glfw/src/CMakeFiles/glfw.dir/win32_monitor.c.obj: C_COMPILER__glfw_unscanned_Debug C$:/code/fmv/third_party/glfw/src/win32_monitor.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
   DEP_FILE = third_party\glfw\src\CMakeFiles\glfw.dir\win32_monitor.c.obj.d
-  FLAGS = -g -std=c99 -Wall
+  FLAGS = -Wall -Wextra -g -std=c99 -Wall
   INCLUDES = -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/glfw/src -IC:/code/fmv/build/third_party/glfw/src
   OBJECT_DIR = third_party\glfw\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = third_party\glfw\src\CMakeFiles\glfw.dir
@@ -1062,7 +1070,7 @@ build third_party/glfw/src/CMakeFiles/glfw.dir/win32_monitor.c.obj: C_COMPILER__
 build third_party/glfw/src/CMakeFiles/glfw.dir/win32_window.c.obj: C_COMPILER__glfw_unscanned_Debug C$:/code/fmv/third_party/glfw/src/win32_window.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
   DEP_FILE = third_party\glfw\src\CMakeFiles\glfw.dir\win32_window.c.obj.d
-  FLAGS = -g -std=c99 -Wall
+  FLAGS = -Wall -Wextra -g -std=c99 -Wall
   INCLUDES = -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/glfw/src -IC:/code/fmv/build/third_party/glfw/src
   OBJECT_DIR = third_party\glfw\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = third_party\glfw\src\CMakeFiles\glfw.dir
@@ -1070,7 +1078,7 @@ build third_party/glfw/src/CMakeFiles/glfw.dir/win32_window.c.obj: C_COMPILER__g
 build third_party/glfw/src/CMakeFiles/glfw.dir/wgl_context.c.obj: C_COMPILER__glfw_unscanned_Debug C$:/code/fmv/third_party/glfw/src/wgl_context.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE
   DEP_FILE = third_party\glfw\src\CMakeFiles\glfw.dir\wgl_context.c.obj.d
-  FLAGS = -g -std=c99 -Wall
+  FLAGS = -Wall -Wextra -g -std=c99 -Wall
   INCLUDES = -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/glfw/src -IC:/code/fmv/build/third_party/glfw/src
   OBJECT_DIR = third_party\glfw\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = third_party\glfw\src\CMakeFiles\glfw.dir
@@ -1084,7 +1092,7 @@ build third_party/glfw/src/CMakeFiles/glfw.dir/wgl_context.c.obj: C_COMPILER__gl
 # Link the static library third_party\glfw\src\libglfw3.a
 
 build third_party/glfw/src/libglfw3.a: C_STATIC_LIBRARY_LINKER__glfw_Debug third_party/glfw/src/CMakeFiles/glfw.dir/context.c.obj third_party/glfw/src/CMakeFiles/glfw.dir/init.c.obj third_party/glfw/src/CMakeFiles/glfw.dir/input.c.obj third_party/glfw/src/CMakeFiles/glfw.dir/monitor.c.obj third_party/glfw/src/CMakeFiles/glfw.dir/platform.c.obj third_party/glfw/src/CMakeFiles/glfw.dir/vulkan.c.obj third_party/glfw/src/CMakeFiles/glfw.dir/window.c.obj third_party/glfw/src/CMakeFiles/glfw.dir/egl_context.c.obj third_party/glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.obj third_party/glfw/src/CMakeFiles/glfw.dir/null_init.c.obj third_party/glfw/src/CMakeFiles/glfw.dir/null_monitor.c.obj third_party/glfw/src/CMakeFiles/glfw.dir/null_window.c.obj third_party/glfw/src/CMakeFiles/glfw.dir/null_joystick.c.obj third_party/glfw/src/CMakeFiles/glfw.dir/win32_module.c.obj third_party/glfw/src/CMakeFiles/glfw.dir/win32_time.c.obj third_party/glfw/src/CMakeFiles/glfw.dir/win32_thread.c.obj third_party/glfw/src/CMakeFiles/glfw.dir/win32_init.c.obj third_party/glfw/src/CMakeFiles/glfw.dir/win32_joystick.c.obj third_party/glfw/src/CMakeFiles/glfw.dir/win32_monitor.c.obj third_party/glfw/src/CMakeFiles/glfw.dir/win32_window.c.obj third_party/glfw/src/CMakeFiles/glfw.dir/wgl_context.c.obj
-  LANGUAGE_COMPILE_FLAGS = -g
+  LANGUAGE_COMPILE_FLAGS = -Wall -Wextra -g
   OBJECT_DIR = third_party\glfw\src\CMakeFiles\glfw.dir
   POST_BUILD = cd .
   PRE_LINK = cd .

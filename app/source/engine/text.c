@@ -96,6 +96,7 @@ void text_init(const char* fontpath, int width, int height)
 void text_update(int width, int height)
 {
     glm_ortho(0.0f, (float)width, 0.0f, (float)height, -1.0f, 1.0f, rd.projection);
+    rd.window_h = height;
 }
 
 void text_draw(const char* text, float x, float y, float scale, vec3 color)
