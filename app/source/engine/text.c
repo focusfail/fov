@@ -52,7 +52,6 @@ void text_init(const char* fontpath, int width, int height)
     FILE* fontfile = fopen(fontpath, "rb");
     if (!fontfile) return;
 
-    // Allocate memory for font buffer
     rd.fontbuf = (unsigned char*)malloc(1 << 20);
     fread(rd.fontbuf, 1, 1 << 20, fontfile);
     fclose(fontfile);
@@ -75,10 +74,8 @@ void text_init(const char* fontpath, int width, int height)
 
     rd.shader = load_shader_program(vertex_source, fragment_source);
 
-    // Create buffers
     glGenVertexArrays(1, &rd.vao);
     glGenBuffers(1, &rd.vbo);
-
     glBindVertexArray(rd.vao);
     glBindBuffer(GL_ARRAY_BUFFER, rd.vbo);
     glBufferData(GL_ARRAY_BUFFER, sizeof(float) * 4 * rd.max_vertices, NULL, GL_DYNAMIC_DRAW);
@@ -88,14 +85,15 @@ void text_init(const char* fontpath, int width, int height)
 
     glBindBuffer(GL_ARRAY_BUFFER, 0);
     glBindVertexArray(0);
-    glm_ortho(0.0f, (float)width, 0.0f, (float)height, -1.0f, 1.0f, rd.projection);
 
+    glm_ortho(0.0f, (float)width, (float)height, 0.0f, -1.0f, 1.0f, rd.projection);
     rd.window_h = height;
 }
 
 void text_update(int width, int height)
 {
-    glm_ortho(0.0f, (float)width, 0.0f, (float)height, -1.0f, 1.0f, rd.projection);
+    glm_ortho(0.0f, (float)width, (float)height, 0.0f, -1.0f, 1.0f, rd.projection);
+
     rd.window_h = height;
 }
 
@@ -112,48 +110,67 @@ void text_draw(const char* text, float x, float y, float scale, vec3 color)
     glBindVertexArray(rd.vao);
     glBindBuffer(GL_ARRAY_BUFFER, rd.vbo);
 
-    float  startX       = x;
-    float* vertices     = malloc(sizeof(float) * 4 * 6 * strlen(text)); // 4 floats per vertex, 6 vertices per char
+    // Anchor at (x, y) with y increasing downward
+    float anchorX = x;
+    float anchorY = y;
+
+    float penX = x;
+    float penY = y;
+
+    float* vertices     = malloc(sizeof(float) * 4 * 6 * strlen(text));
     int    vertex_count = 0;
 
     while (*text) {
         if (*text >= 32 && *text < 128) {
             stbtt_aligned_quad q;
-            stbtt_GetBakedQuad(rd.cdata, rd.bitmap_width, rd.bitmap_height, *text - 32, &startX, &y, &q, 1);
+            // flip=1 means y goes downward (stbtt_GetBakedQuad)
+            stbtt_GetBakedQuad(rd.cdata, rd.bitmap_width, rd.bitmap_height, *text - 32, &penX, &penY, &q, 1);
 
-            // Bottom left
-            vertices[vertex_count++] = q.x0;
-            vertices[vertex_count++] = rd.window_h - q.y1;
+            float blX = q.x0;
+            float blY = q.y1;
+            float brX = q.x1;
+            float brY = q.y1;
+            float tlX = q.x0;
+            float tlY = q.y0;
+            float trX = q.x1;
+            float trY = q.y0;
+
+            float sblX = blX * scale + anchorX;
+            float sblY = blY * scale + anchorY;
+            float sbrX = brX * scale + anchorX;
+            float sbrY = brY * scale + anchorY;
+            float stlX = tlX * scale + anchorX;
+            float stlY = tlY * scale + anchorY;
+            float strX = trX * scale + anchorX;
+            float strY = trY * scale + anchorY;
+
+            vertices[vertex_count++] = sblX;
+            vertices[vertex_count++] = sblY;
             vertices[vertex_count++] = q.s0;
             vertices[vertex_count++] = q.t1;
 
-            // Bottom right
-            vertices[vertex_count++] = q.x1;
-            vertices[vertex_count++] = rd.window_h - q.y1;
+            vertices[vertex_count++] = sbrX;
+            vertices[vertex_count++] = sbrY;
             vertices[vertex_count++] = q.s1;
             vertices[vertex_count++] = q.t1;
 
-            // Top left
-            vertices[vertex_count++] = q.x0;
-            vertices[vertex_count++] = rd.window_h - q.y0;
+            vertices[vertex_count++] = stlX;
+            vertices[vertex_count++] = stlY;
             vertices[vertex_count++] = q.s0;
             vertices[vertex_count++] = q.t0;
 
-            // Top left
-            vertices[vertex_count++] = q.x0;
-            vertices[vertex_count++] = rd.window_h - q.y0;
+            vertices[vertex_count++] = stlX;
+            vertices[vertex_count++] = stlY;
             vertices[vertex_count++] = q.s0;
             vertices[vertex_count++] = q.t0;
 
-            // Bottom right
-            vertices[vertex_count++] = q.x1;
-            vertices[vertex_count++] = rd.window_h - q.y1;
+            vertices[vertex_count++] = sbrX;
+            vertices[vertex_count++] = sbrY;
             vertices[vertex_count++] = q.s1;
             vertices[vertex_count++] = q.t1;
 
-            // Top right
-            vertices[vertex_count++] = q.x1;
-            vertices[vertex_count++] = rd.window_h - q.y0;
+            vertices[vertex_count++] = strX;
+            vertices[vertex_count++] = strY;
             vertices[vertex_count++] = q.s1;
             vertices[vertex_count++] = q.t0;
         }
