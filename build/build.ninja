@@ -122,6 +122,14 @@ build CMakeFiles/fmv.dir/app/source/core/model.c.obj: C_COMPILER__fmv_unscanned_
   OBJECT_DIR = CMakeFiles\fmv.dir
   OBJECT_FILE_DIR = CMakeFiles\fmv.dir\app\source\core
 
+build CMakeFiles/fmv.dir/app/source/core/scene.c.obj: C_COMPILER__fmv_unscanned_Debug C$:/code/fmv/app/source/core/scene.c || cmake_object_order_depends_target_fmv
+  DEFINES = -DLOG_USE_COLOR
+  DEP_FILE = CMakeFiles\fmv.dir\app\source\core\scene.c.obj.d
+  FLAGS = -Wall -Wextra -g -std=gnu11
+  INCLUDES = -IC:/code/fmv/app/include -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/stb -IC:/code/fmv/third_party/glad/include -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/log.c/src
+  OBJECT_DIR = CMakeFiles\fmv.dir
+  OBJECT_FILE_DIR = CMakeFiles\fmv.dir\app\source\core
+
 build CMakeFiles/fmv.dir/app/source/engine/arcball.c.obj: C_COMPILER__fmv_unscanned_Debug C$:/code/fmv/app/source/engine/arcball.c || cmake_object_order_depends_target_fmv
   DEFINES = -DLOG_USE_COLOR
   DEP_FILE = CMakeFiles\fmv.dir\app\source\engine\arcball.c.obj.d
@@ -202,7 +210,7 @@ build CMakeFiles/fmv.dir/app/source/parsers/obj.c.obj: C_COMPILER__fmv_unscanned
 #############################################
 # Link the executable fmv.exe
 
-build fmv.exe: C_EXECUTABLE_LINKER__fmv_Debug CMakeFiles/fmv.dir/app/source/core/model.c.obj CMakeFiles/fmv.dir/app/source/engine/arcball.c.obj CMakeFiles/fmv.dir/app/source/engine/draw.c.obj CMakeFiles/fmv.dir/app/source/engine/file.c.obj CMakeFiles/fmv.dir/app/source/engine/input.c.obj CMakeFiles/fmv.dir/app/source/engine/orbit.c.obj CMakeFiles/fmv.dir/app/source/engine/shader.c.obj CMakeFiles/fmv.dir/app/source/engine/text.c.obj CMakeFiles/fmv.dir/app/source/main.c.obj CMakeFiles/fmv.dir/app/source/parsers/obj.c.obj | third_party/glfw/src/libglfw3.a libglad.a third_party/cglm/libcglm.dll.a liblogc.a || libglad.a liblogc.a third_party/cglm/libcglm-0.dll third_party/glfw/src/libglfw3.a
+build fmv.exe: C_EXECUTABLE_LINKER__fmv_Debug CMakeFiles/fmv.dir/app/source/core/model.c.obj CMakeFiles/fmv.dir/app/source/core/scene.c.obj CMakeFiles/fmv.dir/app/source/engine/arcball.c.obj CMakeFiles/fmv.dir/app/source/engine/draw.c.obj CMakeFiles/fmv.dir/app/source/engine/file.c.obj CMakeFiles/fmv.dir/app/source/engine/input.c.obj CMakeFiles/fmv.dir/app/source/engine/orbit.c.obj CMakeFiles/fmv.dir/app/source/engine/shader.c.obj CMakeFiles/fmv.dir/app/source/engine/text.c.obj CMakeFiles/fmv.dir/app/source/main.c.obj CMakeFiles/fmv.dir/app/source/parsers/obj.c.obj | third_party/glfw/src/libglfw3.a libglad.a third_party/cglm/libcglm.dll.a liblogc.a || libglad.a liblogc.a third_party/cglm/libcglm-0.dll third_party/glfw/src/libglfw3.a
   FLAGS = -Wall -Wextra -g
   LINK_LIBRARIES = third_party/glfw/src/libglfw3.a  libglad.a  third_party/cglm/libcglm.dll.a  liblogc.a  -lUxTheme  -lDwmapi  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\fmv.dir

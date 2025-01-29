@@ -19,6 +19,12 @@
 },
 {
   "directory": "C:/code/fmv/build",
+  "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DLOG_USE_COLOR -IC:/code/fmv/app/include -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/stb -IC:/code/fmv/third_party/glad/include -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/log.c/src -Wall -Wextra -g -std=gnu11 -o CMakeFiles\\fmv.dir\\app\\source\\core\\scene.c.obj -c C:\\code\\fmv\\app\\source\\core\\scene.c",
+  "file": "C:\\code\\fmv\\app\\source\\core\\scene.c",
+  "output": "CMakeFiles\\fmv.dir\\app\\source\\core\\scene.c.obj"
+},
+{
+  "directory": "C:/code/fmv/build",
   "command": "C:\\.msys64\\mingw64\\bin\\gcc.exe -DLOG_USE_COLOR -IC:/code/fmv/app/include -IC:/code/fmv/third_party/glfw/include -IC:/code/fmv/third_party/stb -IC:/code/fmv/third_party/glad/include -IC:/code/fmv/third_party/cglm/include -IC:/code/fmv/third_party/log.c/src -Wall -Wextra -g -std=gnu11 -o CMakeFiles\\fmv.dir\\app\\source\\engine\\arcball.c.obj -c C:\\code\\fmv\\app\\source\\engine\\arcball.c",
   "file": "C:\\code\\fmv\\app\\source\\engine\\arcball.c",
   "output": "CMakeFiles\\fmv.dir\\app\\source\\engine\\arcball.c.obj"

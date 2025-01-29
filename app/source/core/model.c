@@ -195,8 +195,10 @@ gpu_model_t model_upload(model_t* m)
         return (gpu_model_t) { 0 };
     }
 
-    g.vertex_count = m->vertex_count / 3;
+    g.vertex_count = m->vertex_count;
     g.indice_count = m->indice_count;
+    g.normal_count = m->normal_count;
+    g.texcrd_count = m->texcrd_count;
 
     if (m->texcrd_count > 0 && m->normal_count > 0 && !FORCE_SIMPLE_SHADER) {
         g.program = load_shader_program(vs_source_normals_texcoords, fs_source_normals_texcoords);
@@ -211,7 +213,36 @@ gpu_model_t model_upload(model_t* m)
     return g;
 }
 
-void model_render(const gpu_model_t* g, mat4 proj, mat4 view)
+float model_get_size_mb(const model_t* m)
+{
+    float mbs = ((m->vertex_count * sizeof(double) +       //
+                  m->indice_count * sizeof(unsigned int) + //
+                  m->normal_count * sizeof(float) +        //
+                  m->texcrd_count * sizeof(float))         //
+                 / (1024.0f * 1024.0f));
+
+    return mbs;
+}
+
+void gpu_model_init(gpu_model_t* model)
+{
+    model->vao     = 0;
+    model->vbo     = 0;
+    model->nbo     = 0;
+    model->tbo     = 0;
+    model->ebo     = 0;
+    model->program = 0;
+
+    model->vertex_count = 0;
+    model->indice_count = 0;
+    model->normal_count = 0;
+    model->texcrd_count = 0;
+    glm_vec3_zero(model->min_vertex);
+    glm_vec3_zero(model->max_vertex);
+    glm_mat4_identity(model->model);
+}
+
+void gpu_model_render(const gpu_model_t* g, mat4 proj, mat4 view)
 {
     glUseProgram(g->program);
     glBindVertexArray(g->vao);
@@ -234,13 +265,34 @@ void model_render(const gpu_model_t* g, mat4 proj, mat4 view)
     glBindVertexArray(0);
 }
 
-float model_get_size_mb(const model_t* m)
+float gpu_model_get_size_mb(const gpu_model_t* g)
 {
-    float mbs = ((m->vertex_count * sizeof(double) +       //
-                  m->indice_count * sizeof(unsigned int) + //
-                  m->normal_count * sizeof(float) +        //
-                  m->texcrd_count * sizeof(float))         //
+    float mbs = ((g->vertex_count * sizeof(double) +       //
+                  g->indice_count * sizeof(unsigned int) + //
+                  g->normal_count * sizeof(float) +        //
+                  g->texcrd_count * sizeof(float))         //
                  / (1024.0f * 1024.0f));
 
     return mbs;
+}
+
+void gpu_model_unload(gpu_model_t* g)
+{
+    if (g->ebo > 0) {
+        glDeleteBuffers(1, &g->ebo);
+    }
+    if (g->nbo > 0) {
+        glDeleteBuffers(1, &g->nbo);
+    }
+    if (g->vbo > 0) {
+        glDeleteBuffers(1, &g->vbo);
+    }
+    if (g->tbo > 0) {
+        glDeleteBuffers(1, &g->tbo);
+    }
+    if (g->vao > 0) {
+        glDeleteVertexArrays(1, &g->vao);
+    }
+
+    glDeleteProgram(g->program);
 }

@@ -8,10 +8,6 @@
 #define FORCE_SIMPLE_SHADER 1
 
 typedef struct {
-    // unsigned int indices[MAX_INDICES * 3];
-    // float        vertices[MAX_VERTICES * 3];
-    // float        normals[MAX_VERTICES * 3];
-    // float        texcrds[MAX_VERTICES * 2];
     unsigned int* indices;
     double*       vertices;
     float*        normals;
@@ -31,6 +27,8 @@ typedef struct {
     unsigned int program;
     int          vertex_count;
     int          indice_count;
+    int          normal_count;
+    int          texcrd_count;
     vec3         min_vertex;
     vec3         max_vertex;
     mat4         model;
@@ -41,6 +39,9 @@ void        model_free(model_t* model);
 float       model_get_size_mb(const model_t* model);
 gpu_model_t model_upload(model_t* model);
 
-void model_render(const gpu_model_t* model, mat4 proj, mat4 view);
+void  gpu_model_init(gpu_model_t* model);
+void  gpu_model_render(const gpu_model_t* model, mat4 proj, mat4 view);
+float gpu_model_get_size_mb(const gpu_model_t* model);
+void  gpu_model_unload(gpu_model_t* model);
 
 #endif // __MODEL_H__
