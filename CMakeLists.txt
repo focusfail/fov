@@ -1,4 +1,5 @@
 cmake_minimum_required(VERSION 3.20)
+project(fov)
 
 if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
     set(DEFAULT_BUILD_TYPE "Release")
@@ -7,12 +8,25 @@ if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
     set_property(CACHE CMAKE_BUILD_TYPE PROPERTY STRINGS "Debug" "Release" "MinSizeRel" "RelWithDebInfo")
 endif()
 
+message(STATUS "Build type: ${CMAKE_BUILD_TYPE}")
+
+if(WIN32)
+    # MinGW specific flags with size optimizations
+    set(CMAKE_C_FLAGS_RELEASE "-Os -DNDEBUG -fno-exceptions -fno-rtti -fdata-sections -ffunction-sections")
+    set(CMAKE_EXE_LINKER_FLAGS_RELEASE "-mwindows -s -Wl,--gc-sections")
+    set(CMAKE_C_FLAGS_DEBUG "-g -O0")
+    set(CMAKE_EXE_LINKER_FLAGS_DEBUG "")
+else()
+    set(CMAKE_C_FLAGS_RELEASE "-Os -DNDEBUG -fdata-sections -ffunction-sections")
+    set(CMAKE_EXE_LINKER_FLAGS_RELEASE "-s -Wl,--gc-sections")
+    set(CMAKE_C_FLAGS_DEBUG "-g")
+endif()
 
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_C_STANDARD_REQUIRED ON)
-set(CMAKE_C_FLAGS "-Wall -Wextra")
-set(CMAKE_C_FLAGS_DEBUG "-g")
-set(CMAKE_C_FLAGS_RELEASE "-O3")
+
+add_compile_options("-Wall" "-Wextra")
+
 add_subdirectory(third_party/cglm)
 add_subdirectory(third_party/glfw)
 
@@ -33,7 +47,6 @@ add_library(logc STATIC
 target_include_directories(logc PUBLIC third_party/log.c/src)
 target_compile_definitions(logc PUBLIC LOG_USE_COLOR)
 
-project(fov)
 file(GLOB_RECURSE fov_src app/source/*.c)
 add_executable(fov)
 target_sources(fov PRIVATE ${fov_src})
