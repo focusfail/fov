@@ -7,59 +7,6 @@
 
 #include "engine/shader.h"
 
-static const char* vs_source_normals_texcoords = "#version 460 core\n"
-                                                 "layout (location = 0) in dvec3 aPos;\n"
-                                                 "layout (location = 1) in vec3 aNormal;\n"
-                                                 "layout (location = 2) in vec2 aTexcoord;\n"
-                                                 "out vec3 FragPos;\n"
-                                                 "out vec3 Normal;\n"
-                                                 "uniform mat4 uProj;\n"
-                                                 "uniform mat4 uView;\n"
-                                                 "uniform mat4 uModel;\n"
-                                                 "uniform vec3 uModelMin;\n"
-                                                 "uniform vec3 uModelMax;\n"
-                                                 "void main() {\n"
-                                                 "    vec3 center = (uModelMax + uModelMin) * 0.5;\n"
-                                                 "    vec3 extent = (uModelMax - uModelMin) * 0.5;\n"
-                                                 "    float maxExtent = max(max(extent.x, extent.y), extent.z);\n"
-                                                 "    vec3 normalized = (vec3(aPos) - center) / maxExtent;\n"
-                                                 "    vec3 scaled = normalized * 1.0f;\n"
-                                                 "    gl_Position = uProj * uView * uModel * vec4(scaled, 1.0);\n"
-                                                 "    FragPos = vec3(uModel * vec4(scaled, 1.0));\n"
-                                                 "    Normal = mat3(transpose(inverse(uModel))) * aNormal;\n"
-                                                 "}\n";
-
-static const char* fs_source_normals_texcoords
-    = "#version 460 core\n"
-      "in vec3 FragPos;\n"
-      "in vec3 Normal;\n"
-      "out vec4 FragColor;\n"
-      "void main() {\n"
-      "    // Material properties\n"
-      "    vec3 baseColor = vec3(0.8, 0.8, 0.8);\n"
-      "    float ambientStrength = 0.2;\n"
-      "    float specularStrength = 0.5;\n"
-      "    float shininess = 32.0;\n"
-      "    // Light properties\n"
-      "    vec3 lightPos = vec3(2.0, 2.0, 2.0);\n"
-      "    vec3 viewPos = vec3(0.0, 0.0, 5.0);\n"
-      "    // Ambient\n"
-      "    vec3 ambient = ambientStrength * baseColor;\n"
-      "    // Diffuse\n"
-      "    vec3 norm = normalize(Normal);\n"
-      "    vec3 lightDir = normalize(lightPos - FragPos);\n"
-      "    float diff = max(dot(norm, lightDir), 0.0);\n"
-      "    vec3 diffuse = diff * baseColor;\n"
-      "    // Specular\n"
-      "    vec3 viewDir = normalize(viewPos - FragPos);\n"
-      "    vec3 reflectDir = reflect(-lightDir, norm);\n"
-      "    float spec = pow(max(dot(viewDir, reflectDir), 0.0), shininess);\n"
-      "    vec3 specular = specularStrength * spec * vec3(1.0);\n"
-      "    // Combine results\n"
-      "    vec3 result = ambient + diffuse + specular;\n"
-      "    FragColor = vec4(result, 1.0);\n"
-      "}\n";
-
 static const char* vs_source = "#version 460 core\n"
                                "layout (location = 0) in dvec3 aPos;\n"
                                "out vec3 FragPos;\n"
@@ -139,8 +86,6 @@ gpu_model_t model_upload(model_t* m)
     glGenVertexArrays(1, &g.vao);
     glBindVertexArray(g.vao);
 
-    log_info("Vertex count: %i", m->vertex_count);
-
     // Vertex buffer object
     glGenBuffers(1, &g.vbo);
     glBindBuffer(GL_ARRAY_BUFFER, g.vbo);
@@ -200,13 +145,9 @@ gpu_model_t model_upload(model_t* m)
     g.normal_count = m->normal_count;
     g.texcrd_count = m->texcrd_count;
 
-    if (m->texcrd_count > 0 && m->normal_count > 0 && !FORCE_SIMPLE_SHADER) {
-        g.program = load_shader_program(vs_source_normals_texcoords, fs_source_normals_texcoords);
-        log_info("Using normal & texcoord shader.");
-    } else {
-        g.program = load_shader_program(vs_source, fs_source);
-        log_info("Using default shader.");
-    }
+    g.program = load_shader_program(vs_source, fs_source);
+
+    log_info("Successfully uploaded model with %u vertices to the gpu", m->vertex_count);
 
     glBindVertexArray(0);
 

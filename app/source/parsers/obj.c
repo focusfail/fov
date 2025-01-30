@@ -11,7 +11,7 @@ void parse_obj(model_t* m, const char* fp)
 {
     FILE* file = fopen(fp, "r");
     if (!file) {
-        log_fatal("Failed to open file %s", fp);
+        log_fatal("Failed to open .obj file to parse %s", fp);
     }
 
     int  face_format = -1;
@@ -32,26 +32,25 @@ void parse_obj(model_t* m, const char* fp)
                            &m->vertices[m->vertex_count + 2])
                     != 3)
                 {
-                    log_error("Invalid vertex at line %ld", line_num);
+                    log_warn("Invalid vertex at line %ld", line_num);
                     continue;
                 }
                 m->vertex_count += 3;
             } else if (line[1] == 'n') {
-                if (sscanf(line + 3, "%f %f %f", &m->normals[m->normal_count], &m->normals[m->normal_count + 1],
-                           &m->normals[m->normal_count + 2])
-                    != 3)
-                {
-                    log_error("Invalid normal at line %ld", line_num);
-                    continue;
-                }
-                m->normal_count += 3;
+                // if (sscanf(line + 3, "%f %f %f", &m->normals[m->normal_count], &m->normals[m->normal_count + 1],
+                //            &m->normals[m->normal_count + 2])
+                //     != 3)
+                // {
+                //     log_warn("Invalid normal at line %ld", line_num);
+                //     continue;
+                // }
+                // m->normal_count += 3;
             } else if (line[1] == 't') {
-                // Fix: Read only 2 components for texture coordinates
-                if (sscanf(line + 3, "%f %f", &m->texcrds[m->texcrd_count], &m->texcrds[m->texcrd_count + 1]) != 2) {
-                    log_error("Invalid texcoord at line %ld", line_num);
-                    continue;
-                }
-                m->texcrd_count += 2;
+                // if (sscanf(line + 3, "%f %f", &m->texcrds[m->texcrd_count], &m->texcrds[m->texcrd_count + 1]) != 2) {
+                //     log_warn("Invalid texcoord at line %ld", line_num);
+                //     continue;
+                // }
+                // m->texcrd_count += 2;
             }
             break;
         }
@@ -69,13 +68,13 @@ void parse_obj(model_t* m, const char* fp)
                 result
                     = sscanf(line + 2, "%u/%u/%u %u/%u/%u %u/%u/%u", &v1, &vt1, &vn1, &v2, &vt2, &vn2, &v3, &vt3, &vn3);
                 if (result != 9) {
-                    log_error("Invalid face format at line %ld", line_num);
+                    log_warn("Invalid face format at line %ld", line_num);
                     continue;
                 }
             } else {
                 result = sscanf(line + 2, "%u %u %u", &v1, &v2, &v3);
                 if (result != 3) {
-                    log_error("Invalid face format at line %ld", line_num);
+                    log_warn("Invalid face format at line %ld", line_num);
                     continue;
                 }
             }
@@ -84,7 +83,7 @@ void parse_obj(model_t* m, const char* fp)
             if (v1 == 0 || v2 == 0 || v3 == 0 || v1 > (unsigned int)m->vertex_count / 3
                 || v2 > (unsigned int)m->vertex_count / 3 || v3 > (unsigned int)m->vertex_count / 3)
             {
-                log_error("Invalid vertex index at line %ld", line_num);
+                log_warn("Invalid vertex index at line %ld", line_num);
                 continue;
             }
 
@@ -97,11 +96,8 @@ void parse_obj(model_t* m, const char* fp)
         line_num++;
     }
 
-    log_info("Loaded model: %d vertices, %d indices, %d texcoords, %d normals", m->vertex_count / 3, m->indice_count,
-             m->texcrd_count, m->normal_count);
-
-    unsigned int mbs = model_get_size_mb(m);
-    log_info("Approx. model size: %u", mbs);
+    float sz = model_get_size_mb(m);
+    log_info("Loaded model [verts: %d;  approx. size: %.4fMB]", m->vertex_count, sz);
 
     fclose(file);
-} // 1.19976mb + 1.199712mb
+}

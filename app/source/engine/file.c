@@ -7,7 +7,7 @@
 char* file_read_bytes(const char* filepath, long* bytes_read)
 {
     FILE* file = fopen(filepath, "rb");
-    if (!file) {
+    if (file == NULL) {
         log_error("Failed to open file: %s", filepath);
         return NULL;
     }

@@ -3,7 +3,7 @@
 
 #include "glad/glad.h"
 #define GLFW_INCLUDE_NONE
-#include "glfw/glfw3.h"
+#include "GLFW/glfw3.h"
 #include "log.h"
 
 #ifdef _WIN32

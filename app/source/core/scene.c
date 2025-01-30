@@ -3,6 +3,7 @@
 #include "parsers/obj.h"
 
 #include "glad/glad.h"
+#include "log.h"
 
 #include <string.h>
 

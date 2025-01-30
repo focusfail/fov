@@ -16,6 +16,11 @@
   - [ ] Orthographic
   - [ ] Isometric
 
+## 🐛 Fix
+
+- [ ] More robust logging
+- [ ] Text rendering
+
 **Supported formats:**
 
 - [x] `Wavefront Object (.obj)`
