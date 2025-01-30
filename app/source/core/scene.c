@@ -15,13 +15,17 @@ void scene_init(scene_t* scene, int width, int heigth)
 
     gpu_model_init(&scene->gpu_model);
 
-    scene->dirty     = true;
-    scene->modelpath = NULL;
+    scene->dirty      = true;
+    scene->modelpath  = NULL;
+    scene->model_size = 0;
 }
 
-void scene_free(scene_t* scene)
+void scene_unload(scene_t* scene)
 {
+    scene->modelpath  = NULL;
+    scene->model_size = 0;
     gpu_model_unload(&scene->gpu_model);
+    free(scene->modelpath);
 }
 
 void scene_render(scene_t* scene)
@@ -35,7 +39,10 @@ void scene_load_model(scene_t* scene, const char* modelpath)
     // Ingnore if model paths match
     if (scene->modelpath && strcmp(modelpath, scene->modelpath) == 0) return;
 
-    scene->modelpath = modelpath;
+    free(scene->modelpath);
+    scene->modelpath = malloc(strlen(modelpath) + 1);
+
+    strcpy(scene->modelpath, modelpath);
 
     gpu_model_unload(&scene->gpu_model);
 
@@ -46,7 +53,8 @@ void scene_load_model(scene_t* scene, const char* modelpath)
     scene->gpu_model = model_upload(&model);
 
     model_free(&model);
-    scene->dirty = true;
+    scene->dirty      = true;
+    scene->model_size = gpu_model_get_size_mb(&scene->gpu_model);
 }
 
 void scene_resize(scene_t* scene, int width, int height)
@@ -73,4 +81,9 @@ void scene_handle_mouse_move(scene_t* scene, float dx, float dy)
 
     orbit_update(&scene->camera);
     scene->dirty = true;
+}
+
+bool scene_is_loaded(scene_t* scene)
+{
+    return scene->modelpath != NULL;
 }

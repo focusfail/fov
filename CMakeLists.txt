@@ -39,3 +39,7 @@ add_executable(fov)
 target_sources(fov PRIVATE ${fov_src})
 target_link_libraries(fov PRIVATE glfw stb glad cglm logc UxTheme Dwmapi)
 target_include_directories(fov PRIVATE app/include)
+target_compile_definitions(fov PRIVATE 
+    $<$<CONFIG:Debug>:DEBUG_BUILD>
+    $<$<CONFIG:Release>:RELEASE_BUILD>
+)

@@ -1,9 +1,5 @@
 # fov
 
-What does `fov` stand for?
-
-- It could stand for "fast object viewer" but im sure its not really fast.
-
 ## ✨ Features
 
 - [x] Drop, load and render models
@@ -11,6 +7,8 @@ What does `fov` stand for?
 - [x] Resizeable window
 - [ ] Model info display
 - [ ] Logging to file
+- [ ] Change light dir
+- [ ] Cache option
 - [ ] View modes
   - [ ] Wireframe
   - [ ] Points
@@ -20,4 +18,7 @@ What does `fov` stand for?
 
 **Supported formats:**
 
-- `Wavefront Object (.obj)`
+- [x] `Wavefront Object (.obj)`
+- [ ] `Stereolithography (.stl)`
+- [ ] `GL Transmission Format (.gltf)`
+- [ ] `ASCII scene export (.ase)`

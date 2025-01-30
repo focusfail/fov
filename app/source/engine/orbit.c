@@ -13,6 +13,8 @@ void orbit_update(orbit_cam_t* orbit)
 
 void orbit_init(orbit_cam_t* orbit)
 {
+    orbit->pitch = 0.0f;
+    orbit->yaw   = 0.0f;
     glm_vec3_copy(orbit->position, (vec3) { 1.0f, 1.0f, 1.0f });
     glm_vec3_copy(orbit->target, (vec3) { 0.0f, 0.0f, 0.0f });
     orbit_update(orbit);

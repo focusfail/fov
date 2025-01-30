@@ -1,4 +1,4 @@
-# Install script for directory: C:/code/fmv/third_party/glfw/docs
+# Install script for directory: C:/code/fov/third_party/glfw/docs
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

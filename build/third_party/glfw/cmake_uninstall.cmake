@@ -1,9 +1,9 @@
 
-if (NOT EXISTS "C:/code/fmv/build/third_party/glfw/install_manifest.txt")
-    message(FATAL_ERROR "Cannot find install manifest: \"C:/code/fmv/build/third_party/glfw/install_manifest.txt\"")
+if (NOT EXISTS "C:/code/fov/build/third_party/glfw/install_manifest.txt")
+    message(FATAL_ERROR "Cannot find install manifest: \"C:/code/fov/build/third_party/glfw/install_manifest.txt\"")
 endif()
 
-file(READ "C:/code/fmv/build/third_party/glfw/install_manifest.txt" files)
+file(READ "C:/code/fov/build/third_party/glfw/install_manifest.txt" files)
 string(REGEX REPLACE "\n" ";" files "${files}")
 
 foreach (file ${files})

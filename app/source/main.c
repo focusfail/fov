@@ -15,6 +15,8 @@
 #include "parsers/obj.h"
 
 scene_t scene;
+int     window_width  = 1280;
+int     window_height = 720;
 
 void scroll_callback(GLFWwindow* _window, double _xoffset, double yoffset)
 {
@@ -30,13 +32,25 @@ void cursor_position_callback(GLFWwindow* window, double xpos, double ypos)
     last_xpos = xpos;
     last_ypos = ypos;
 
-    if (glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_LEFT) != GLFW_PRESS) return;
+    if (glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_LEFT) == GLFW_PRESS) {
+        scene_handle_mouse_move(&scene, dx, dy);
+    } else if (glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_RIGHT) == GLFW_PRESS) {
+        vec2 move = { dx, dy };
+        vec2 neg  = { -1.0f, -1.0f };
 
-    scene_handle_mouse_move(&scene, dx, dy);
+        float len = glm_vec2_norm(move);
+
+        float direction  = glm_vec2_dot(move, neg);
+        float zoom_delta = len * (direction > 0 ? 1.0f : -1.0f);
+
+        scene_handle_mouse_scroll(&scene, zoom_delta * 0.25f);
+    }
 }
 
 void resize_callback(GLFWwindow*, int width, int height)
 {
+    window_width  = width;
+    window_height = height;
     text_update(width, height);
     scene_resize(&scene, width, height);
 }
@@ -50,34 +64,34 @@ void drop_callback(GLFWwindow*, int count, const char** paths)
 
 int main(int argc, char const* argv[])
 {
-    const char* fp = "c:/code/fmv/test/models/LBody.obj";
-
-    if (argc >= 2) {
-        fp = argv[1];
-    }
-
-    int window_width  = 1280;
-    int window_height = 720;
-
     GLFWwindow* window = create_window("fmv", window_width, window_height);
     glfwSetScrollCallback(window, scroll_callback);
     glfwSetFramebufferSizeCallback(window, resize_callback);
     glfwSetCursorPosCallback(window, cursor_position_callback);
     glfwSetDropCallback(window, drop_callback);
 
-    text_init("c:/code/fmv/app/assets/fonts/Silver.ttf", window_width, window_height);
+    text_init("c:/code/fov/app/assets/fonts/Silver.ttf", window_width, window_height);
     input_init(window);
 
     scene_init(&scene, window_width, window_height);
-    scene_load_model(&scene, fp);
+#ifdef DEBUG_BUILD
+    scene_load_model(&scene, "C:/code/fov/test/models/armadillo.obj");
+#else
+    if (argc >= 2) {
+        scene_load_model(&scene, argv[1]);
+    }
+#endif
 
-    glEnable(GL_DEPTH_TEST);
-    glDepthFunc(GL_LESS);
     glDisable(GL_CULL_FACE);
+    glEnable(GL_DEPTH_TEST);
+    glEnable(GL_BLEND);
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+    glDepthFunc(GL_LESS);
 
+    char   fps_label[16]  = "FPS: N/A";
+    char   info_label[64] = "verts: n/a    size: n/a";
     double last_frame = 0.0, this_frame = 0.0, dt = 0.0;
-    char   fps_chars[16] = "FPS: N/A";
-    double fps_timeout   = 1.0;
+    double fps_timeout = 1.0;
 
     GLFWcursor* hand_cursor = glfwCreateStandardCursor(GLFW_RESIZE_ALL_CURSOR);
     GLFWcursor* norm_cursor = glfwCreateStandardCursor(GLFW_ARROW_CURSOR);
@@ -87,20 +101,45 @@ int main(int argc, char const* argv[])
         dt         = this_frame - last_frame;
         last_frame = this_frame;
 
+        // Exit on escape
         if (get_key(GLFW_KEY_ESCAPE)) break;
+        // Reload model
+        if (get_key(GLFW_KEY_R) && scene_is_loaded(&scene)) {
+
+            char* temp = malloc(strlen(scene.modelpath) + 1);
+            strcpy(temp, scene.modelpath);
+
+            scene_unload(&scene);
+            scene_load_model(&scene, temp);
+            free(temp);
+        }
+        // Reset camera
+        if (get_key(GLFW_KEY_H) && scene_is_loaded(&scene)) {
+            scene.camera.radius = 5.0f;
+            orbit_init(&scene.camera);
+        }
 
         // Update fps label
         if (fps_timeout > 1.0) {
-            sprintf(fps_chars, "FPS: %.2f", (1.0 / dt));
+            sprintf(fps_label, "FPS: %.2f", (1.0 / dt));
             fps_timeout = 0.0;
         }
-        glfwSetWindowTitle(window, fps_chars);
+        glfwSetWindowTitle(window, fps_label);
         fps_timeout += dt;
 
         glClearColor(0.08f, 0.08f, 0.08f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-        scene_render(&scene);
+        if (scene_is_loaded(&scene)) {
+            scene_render(&scene);
+
+            // todo: dont format the string every frame bozo
+            sprintf(info_label, "verts: %i  size: %.2fMB", scene.gpu_model.vertex_count, scene.model_size);
+
+            text_draw(info_label, 10, 10, 1.1f, (vec3) { 0.9f, 0.9f, 0.9f });
+        } else {
+            text_draw("Drop a supported object file.", 10, 10, 2.0f, (vec3) { 1.0f, 1.0f, 1.0f });
+        }
 
         glfwSwapBuffers(window);
 
@@ -108,7 +147,7 @@ int main(int argc, char const* argv[])
         glfwPollEvents();
     }
 
-    scene_free(&scene);
+    scene_unload(&scene);
     text_cleanup();
 
     glfwDestroyCursor(hand_cursor);
