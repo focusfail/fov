@@ -5,6 +5,7 @@
     "files.associations": {
         "glfw3.h": "c",
         "obj.h": "c",
-        "create_window.h": "c"
+        "create_window.h": "c",
+        "string.h": "c"
     }
 }

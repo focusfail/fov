@@ -5,8 +5,10 @@
 - [x] Drop, load and render models
 - [x] Orbital camera
 - [x] Resizeable window
-- [ ] Model info display
-- [ ] Logging to file
+- [x] Model info display
+- [x] Grid
+- [x] Logging to file
+- [x] Nuklear
 - [ ] Change light dir
 - [ ] Cache option
 - [ ] View modes
@@ -19,11 +21,13 @@
 ## 🐛 Fix
 
 - [ ] More robust logging
-- [ ] Text rendering
+- [ ] Text rendering origin
+- [ ] Better model bbox logic
+- [ ] support more obj formats
 
 **Supported formats:**
 
-- [x] `Wavefront Object (.obj)`
+- [ ] `Wavefront Object (.obj)`
 - [ ] `Stereolithography (.stl)`
 - [ ] `GL Transmission Format (.gltf)`
 - [ ] `ASCII scene export (.ase)`

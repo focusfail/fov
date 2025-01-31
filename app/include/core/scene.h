@@ -1,6 +1,7 @@
 #ifndef __SCENE_H__
 #define __SCENE_H__
 
+#include "core/grid.h"
 #include "core/model.h"
 #include "engine/orbit.h"
 
@@ -9,6 +10,7 @@
 typedef struct {
     char*       modelpath;
     orbit_cam_t camera;
+    grid_t      grid;
     gpu_model_t gpu_model;
     int         window_height;
     int         window_width;
@@ -16,6 +18,8 @@ typedef struct {
     mat4        projection;
     bool        dirty;
 } scene_t;
+
+struct nk_context;
 
 void scene_init(scene_t* scene, int width, int height);
 void scene_unload(scene_t* scene);

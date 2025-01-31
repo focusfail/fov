@@ -8,12 +8,24 @@
 #include <string.h>
 #include <time.h>
 
-#include "engine/create_window.h"
+#include "core/grid.h"
 #include "engine/input.h"
 #include "engine/orbit.h"
+#include "engine/window.h"
 #define STR_IMPL
 #include "engine/string.h"
-#include "engine/text.h"
+
+#define NK_INCLUDE_FIXED_TYPES
+#define NK_INCLUDE_STANDARD_IO
+#define NK_INCLUDE_STANDARD_VARARGS
+#define NK_INCLUDE_DEFAULT_ALLOCATOR
+#define NK_INCLUDE_VERTEX_BUFFER_OUTPUT
+#define NK_INCLUDE_FONT_BAKING
+#define NK_INCLUDE_DEFAULT_FONT
+#define NK_IMPLEMENTATION
+#include "nuklear.h"
+#define NK_GLFW_GL4_IMPLEMENTATION
+#include "nuklear_glfw_gl4.h"
 
 #include "core/scene.h"
 #include "parsers/obj.h"
@@ -55,7 +67,6 @@ void resize_callback(GLFWwindow*, int width, int height)
 {
     window_width  = width;
     window_height = height;
-    text_update(width, height);
     scene_resize(&scene, width, height);
 }
 
@@ -68,14 +79,24 @@ void drop_callback(GLFWwindow*, int count, const char** paths)
 
 int main(int argc, char const* argv[])
 {
+    struct nk_context* ctx;
 
-    GLFWwindow* window = create_window("fmv", window_width, window_height);
+    GLFWwindow* window = create_window("fov", window_width, window_height);
+
+    // nuklear setup
+    ctx = nk_glfw3_init(window, NK_GLFW3_INSTALL_CALLBACKS, 512 * 1024, 128 * 1024);
+    struct nk_font_atlas* atlas;
+    nk_glfw3_font_stash_begin(&atlas);
+    struct nk_font* large_font = nk_font_atlas_add_default(atlas, 46, 0);
+    struct nk_font* norm_font  = nk_font_atlas_add_default(atlas, 20, 0);
+    nk_glfw3_font_stash_end();
+    nk_style_set_font(ctx, &norm_font->handle);
+
     glfwSetScrollCallback(window, scroll_callback);
     glfwSetFramebufferSizeCallback(window, resize_callback);
     glfwSetCursorPosCallback(window, cursor_position_callback);
     glfwSetDropCallback(window, drop_callback);
 
-    text_init("c:/code/fov/app/assets/fonts/Silver.ttf", window_width, window_height);
     input_init(window);
 
     scene_init(&scene, window_width, window_height);
@@ -88,31 +109,29 @@ int main(int argc, char const* argv[])
     // Load default test model in debug build if no argv is given
     else
     {
-        scene_load_model(&scene, "C:/code/fov/test/models/armadillo.obj");
+        // scene_load_model(&scene, "C:/code/fov/test/models/armadillo.obj");
     }
 #endif
 #ifdef RELEASE_BUILD
     // Log to file in release build
-    FILE* log_file = fopen("log.txt", "w+");
+    FILE* log_file = fopen("fov.log", "w+");
     log_add_fp(log_file, LOG_TRACE);
     log_set_quiet(true);
 #endif // RELEASE_BUILD
 
-    glDisable(GL_CULL_FACE);
-    glEnable(GL_DEPTH_TEST);
-    glEnable(GL_BLEND);
-    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-    glDepthFunc(GL_LESS);
-
-    char   fps_label[16]  = "FPS: N/A";
-    char   info_label[64] = "verts: n/a    size: n/a";
-    double last_frame = 0.0, this_frame = 0.0, dt = 0.0;
+    float  fps         = 0.0f;
+    double dt          = 0.0;
+    double last_frame  = 0.0;
+    double this_frame  = 0.0;
     double fps_timeout = 1.0;
 
     GLFWcursor* hand_cursor = glfwCreateStandardCursor(GLFW_RESIZE_ALL_CURSOR);
     GLFWcursor* norm_cursor = glfwCreateStandardCursor(GLFW_ARROW_CURSOR);
 
     while (!glfwWindowShouldClose(window)) {
+        input_update(window);
+        glfwPollEvents();
+
         this_frame = glfwGetTime();
         dt         = this_frame - last_frame;
         last_frame = this_frame;
@@ -136,30 +155,71 @@ int main(int argc, char const* argv[])
 
         // Update fps label
         if (fps_timeout > 1.0) {
-            sprintf(fps_label, "FPS: %.2f", (1.0 / dt));
+            fps         = (float)(1.0 / dt);
             fps_timeout = 0.0;
         }
         fps_timeout += dt;
 
+        glEnable(GL_DEPTH_TEST);
+        glEnable(GL_BLEND);
+        glDepthFunc(GL_LESS);
+        glViewport(0, 0, window_width, window_height);
         glClearColor(0.08f, 0.08f, 0.08f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
+        nk_glfw3_new_frame();
+
         if (scene_is_loaded(&scene)) {
+
             scene_render(&scene);
 
-            // todo: dont format the string every frame bozo
-            sprintf(info_label, "verts: %i  size: %.2fMB", scene.gpu_model.vertex_count, scene.model_size);
+            if (nk_begin(ctx, "invisible_window", nk_rect(0, 0, (float)window_width, (float)window_height),
+                         NK_WINDOW_NO_INPUT | NK_WINDOW_NO_SCROLLBAR | NK_WINDOW_BACKGROUND
+                             | NK_WINDOW_NOT_INTERACTIVE))
+            {
+                ctx->style.window.background       = nk_rgba(0, 0, 0, 0);
+                ctx->style.window.fixed_background = nk_style_item_color(nk_rgba(0, 0, 0, 0));
+                ctx->style.window.border           = 0;
+                ctx->style.window.padding          = nk_vec2(0, 0);
+                ctx->style.window.spacing          = nk_vec2(0, 0);
 
-            text_draw(info_label, window_width - window_width / 2 - 150, 10, 1.1f, (vec3) { 0.9f, 0.9f, 0.9f });
-            text_draw(fps_label, 10, 10, 1.1f, (vec3) { 0.9f, 0.9f, 0.9f });
+                nk_layout_row_begin(ctx, NK_DYNAMIC, 30, 2);
+                nk_layout_row_push(ctx, 0.5f);
+                nk_labelf(ctx, NK_TEXT_ALIGN_LEFT, "fps: %.1f", fps);
+                nk_layout_row_push(ctx, 0.5f);
+                nk_labelf(ctx, NK_TEXT_ALIGN_RIGHT, "verts: %i  size: %.2fMB", scene.gpu_model.vertex_count,
+                          scene.model_size);
+                nk_layout_row_end(ctx);
+            }
+            nk_end(ctx);
+
         } else {
-            text_draw("Drop a supported object file.", 10, 10, 2.0f, (vec3) { 1.0f, 1.0f, 1.0f });
+            if (nk_begin(ctx, "invisible_window", nk_rect(0, 0, (float)window_width, (float)window_height),
+                         NK_WINDOW_NO_INPUT | NK_WINDOW_NO_SCROLLBAR | NK_WINDOW_BACKGROUND
+                             | NK_WINDOW_NOT_INTERACTIVE))
+            {
+                ctx->style.window.background       = nk_rgba(0, 0, 0, 0);
+                ctx->style.window.fixed_background = nk_style_item_color(nk_rgba(0, 0, 0, 0));
+                ctx->style.window.border           = 0;
+                ctx->style.window.padding          = nk_vec2(0, 0);
+                ctx->style.window.spacing          = nk_vec2(0, 0);
+
+                // Set a larger font
+                nk_style_set_font(ctx, &large_font->handle);
+
+                // Center the text vertically and horizontally
+                nk_layout_space_begin(ctx, NK_STATIC, window_height, 1);
+                nk_layout_space_push(ctx, nk_rect(0, window_height / 2 - 15, window_width, 30));
+                nk_label(ctx, "Drop a supported 3d model file.", NK_TEXT_ALIGN_CENTERED);
+                nk_layout_space_end(ctx);
+
+                nk_style_set_font(ctx, &norm_font->handle);
+            }
+            nk_end(ctx);
         }
 
+        nk_glfw3_render(NK_ANTI_ALIASING_ON);
         glfwSwapBuffers(window);
-
-        input_update(window);
-        glfwPollEvents();
     }
 
 #ifdef RELEASE_BUILD
@@ -167,7 +227,6 @@ int main(int argc, char const* argv[])
 #endif // RELEASE_BUILD
 
     scene_unload(&scene);
-    text_cleanup();
 
     glfwDestroyCursor(hand_cursor);
     glfwDestroyCursor(norm_cursor);

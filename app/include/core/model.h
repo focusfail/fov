@@ -38,6 +38,7 @@ void        model_init(model_t* model);
 void        model_free(model_t* model);
 float       model_get_size_mb(const model_t* model);
 gpu_model_t model_upload(model_t* model);
+// void        model_get_bbox(model_t* model, vec4 bbox);
 
 void  gpu_model_init(gpu_model_t* model);
 void  gpu_model_render(const gpu_model_t* model, mat4 proj, mat4 view);

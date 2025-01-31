@@ -1,5 +1,5 @@
-#ifndef __CREATE_WINDOW_H__
-#define __CREATE_WINDOW_H__
+#ifndef __ENGINE_WINDOW_H__
+#define __ENGINE_WINDOW_H__
 
 #include "glad/glad.h"
 #define GLFW_INCLUDE_NONE
@@ -52,4 +52,4 @@ static GLFWwindow* create_window(const char* title, int width, int height)
     return window;
 }
 
-#endif // __CREATE_WINDOW_H__
+#endif // __ENGINE_WINDOW_H__

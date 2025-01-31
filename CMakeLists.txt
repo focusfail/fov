@@ -47,10 +47,15 @@ add_library(logc STATIC
 target_include_directories(logc PUBLIC third_party/log.c/src)
 target_compile_definitions(logc PUBLIC LOG_USE_COLOR)
 
+# nuklear
+add_library(nuklear INTERFACE)
+target_include_directories(nuklear INTERFACE third_party/nuklear/ third_party/nuklear/demo/glfw_opengl4/)
+
+
 file(GLOB_RECURSE fov_src app/source/*.c)
 add_executable(fov)
 target_sources(fov PRIVATE ${fov_src})
-target_link_libraries(fov PRIVATE glfw stb glad cglm logc UxTheme Dwmapi)
+target_link_libraries(fov PRIVATE glfw stb glad cglm logc nuklear UxTheme Dwmapi)
 target_include_directories(fov PRIVATE app/include)
 target_compile_definitions(fov PRIVATE 
     $<$<CONFIG:Debug>:DEBUG_BUILD>
